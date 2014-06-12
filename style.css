@@ -5,6 +5,9 @@ video {
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
 }
 
 body {
@@ -56,6 +59,9 @@ h1 .black {
   top: 0;
   background: rgb(107, 162, 220);
   -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .logo-stripe-2 {
