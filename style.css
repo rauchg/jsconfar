@@ -1,0 +1,102 @@
+video {
+  position: fixed; right: 0; bottom: 0;
+  min-width: 100%; min-height: 100%;
+  width: auto; height: auto; z-index: -100;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: blur(2px);
+}
+
+body {
+  padding-top: 5%;
+  text-align: center;
+}
+
+h1 {
+  font: 100 35px "Open Sans";
+  color: #fff;
+  display: inline-block;
+  margin: 10% 0;
+}
+
+h1 span {
+  padding: 0 5px;
+  display: inline-block;
+  line-height: 38px;
+  vertical-align: middle;
+}
+
+h1 .white {
+  background: #fff;
+  color: #000;
+}
+
+h1 .black {
+  background: rgba(0,0,0,.8);
+  color: #fff;
+}
+
+.day video {
+  background-image: url(https://i.cloudup.com/tBhSocCpQa-3000x3000.jpeg);
+}
+
+.night video {
+  background-image: url(http://i.cloudup.com/FuYm5W2VCf-3000x3000.jpeg);
+}
+
+.logo {
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-stripe {
+  width: 100%;
+  left: -25%;
+  position: absolute;
+  top: 0;
+  background: rgb(107, 162, 220);
+  -webkit-transform: rotate(-45deg);
+}
+
+.logo-stripe-2 {
+  background: #fff;
+}
+
+.logo-square {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(252, 225, 68, .8);
+}
+
+.logo-type {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: url(https://i.cloudup.com/-oWG66Bo-a.svg)
+}
+
+#logo-main {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+
+#logo-main .logo-type {
+  width: 133px;
+  height: 91px;
+}
+
+#logo-main .logo-stripe {
+  height: 12px;
+}
+
+#logo-main .logo-stripe-2 {
+  top: 16px;
+}
+
+#logo-main .logo-stripe-3 {
+  top: 30px;
+}

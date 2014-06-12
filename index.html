@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JSConf.ar – 24 de Noviembre 2014</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+  <div class="logo" id="logo-main">
+    <div class="logo-square"></div>
+    <div class="logo-stripe logo-stripe-1"></div>
+    <div class="logo-stripe logo-stripe-2"></div>
+    <div class="logo-stripe logo-stripe-3"></div>
+    <div class="logo-type"></div>
+  </div>
+  
+  <h1><span class="black">Buenos Aires</span> <span class="black">29 de Noviembre</span></h1>
+  
+  <video loop poster="">
+  </video>
+  
+  <script>
+    var hh = new Date().getHours();
+    var day = hh >= 6 && hh <= 19;
+    var body = document.body;
+    var video = document.querySelector('video');
+    var source = document.createElement('source');
+    if (day) {
+      body.className = 'day';
+      video.poster = 'https://i.cloudup.com/tBhSocCpQa-3000x3000.jpeg';
+      source.src = 'https://i.cloudup.com/fGNLXBDArb.mp4';
+    } else {
+      body.className = 'night';
+      video.poster = 'http://i.cloudup.com/FuYm5W2VCf-3000x3000.jpeg';
+      source.src = 'https://i.cloudup.com/0RF0wdSFbc.mp4';
+    }
+    video.appendChild(source);
+    video.autoplay = true;
+  </script>
+</body>
+</html>
