@@ -23,7 +23,7 @@
   
   <script>
     var hh = new Date().getHours();
-    var day = hh >= 6 && hh <= 19;
+    var day = '#toggle' != location.hash && (hh >= 6 && hh <= 19);
     var body = document.body;
     var video = document.querySelector('video');
     var source = document.createElement('source');
