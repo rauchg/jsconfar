@@ -1,0 +1,66 @@
+// Recommended hotels
+.section-housing
+  background: $blue
+  color: $white
+  padding: 60px 0
+
+
+.housing-list
+  @extend ul.block-list
+  margin-top: 35px
+  margin-left: -30px
+  margin-right: -30px
+
+
+.housing
+  background: $gray
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: 50% 50%
+  margin-bottom: 2px
+
+  &.hotel-maipu
+    background-image: url(../images/hotel-1.jpg)
+
+  &.hotel-san-martin
+    background-image: url(../images/hotel-2.jpg)
+
+  .description
+    margin-left: 50%
+    padding: 28px 30px
+    background: transparentize($yellow, 0.05)
+
+  h2
+    line-height: 140%
+    font-size: 18px
+    font-weight: bold
+    color: $blue
+
+  p
+    line-height: 140%
+    font-size: 18px
+
+    a
+      color: $white
+
+  .price-and-rating
+    float: right
+    min-width: 130px
+    margin: 3px 3px 0 0
+
+    .price
+      font-size: 48px
+      line-height: 100%
+
+      sup
+        display: inline-block
+        padding-top: 12px
+        margin-left: 2px
+        font-size: 18px
+        line-height: 18px
+        vertical-align: top
+
+    .rating
+
+      .icon
+        margin-right: 4px

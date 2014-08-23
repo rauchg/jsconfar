@@ -1,43 +1,794 @@
 <!DOCTYPE html>
-<html>
+<html lang="es" prefix="og: http://ogp.me/ns#">
 <head>
-  <meta charset="utf-8">
-  <title>JSConf.ar – 29 de Noviembre 2014</title>
-  <link href="style.css" rel="stylesheet" type="text/css">
-  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
+
+  <meta charset="utf-8" />
+
+  <title>JSConf Buenos Aires - Conferencias para la Comunidad Javascript</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="jsconf, javascript, conference, development" />
+  <meta name="robots" content="INDEX, FOLLOW" />
+  <meta name="author" content="Aerolab" />
+
+  <meta property="og:title" content="JSConf Buenos Aires 2014" />
+  <meta property="og:description" content="" />
+  <meta property="og:image" content="" />
+  
+  <link rel="icon" href="styles/images/favicon.png" type="image/png" />
+  <link rel="shortcut icon" href="styles/images/favicon.png" type="image/png" />
+
+  <link rel="stylesheet" href="styles/styles.css" />
+  
+  <meta name="X-UA-Compatible" content="IE=edge" />
+  <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+  <meta name="apple-mobile-web-app-capable" content="no" />
+
 </head>
 <body>
 
-  <div class="logo" id="logo-main">
-    <div class="logo-square"></div>
-    <div class="logo-stripe logo-stripe-1"></div>
-    <div class="logo-stripe logo-stripe-2"></div>
-    <div class="logo-stripe logo-stripe-3"></div>
-    <div class="logo-type"></div>
-  </div>
-  
-  <h1><span class="black">Buenos Aires</span> <span class="black">29 de Noviembre</span></h1>
-  
-  <video loop poster="">
-  </video>
-  
-  <script>
-    var hh = new Date().getHours();
-    var day = '#toggle' != location.hash && (hh >= 6 && hh <= 18);
-    var body = document.body;
-    var video = document.querySelector('video');
-    var source = document.createElement('source');
-    if (day) {
-      body.className = 'day';
-      video.poster = 'https://i.cloudup.com/tBhSocCpQa-3000x3000.jpeg';
-      source.src = 'https://i.cloudup.com/fGNLXBDArb.mp4';
-    } else {
-      body.className = 'night';
-      video.poster = 'http://i.cloudup.com/FuYm5W2VCf-3000x3000.jpeg';
-      source.src = 'https://i.cloudup.com/0RF0wdSFbc.mp4';
-    }
-    video.appendChild(source);
-    video.autoplay = true;
-  </script>
+<div class="site-overlay"></div>
+
+<main>
+
+
+  <header class="section-header">
+
+    <div class="intro-holder">
+
+      <div class="container">
+
+        <h1 class="sprite logo"><span class="screenreader">JSConf</span></h1>
+
+        <address class="vcard">
+          <time datetime="2014-11-29T09:00-03:00">
+            <span class="icon icon-date"></span> 
+            Noviembre 29
+          </time>
+          <span class="adr">
+            <span class="icon icon-place"></span>
+            <span class="street-address">Auditorio Recoleta</span>
+          </span>
+        </address>
+
+
+        <div class="hello">Hello Bs As</div>
+
+        <code>&lt;script src=&quot;JSConf2014.js&quot;&gt;&lt;/script&gt;</code>
+
+
+        <div class="main-menu">
+
+          <div class="tickets">
+            <a class="button button-primary" href="#">
+              <span class="icon icon-tickets-yellow"></span>
+              Entradas
+            </a>
+          </div>
+
+          <div class="video">
+            <a class="button button-secondary" href="#">
+              <span class="icon icon-video"></span>
+              Video 2013
+            </a>
+          </div>
+
+          <div class="countdown">
+            <span class="counter">
+              <strong id="countdown-days">&nbsp;</strong>
+              Days
+            </span>
+            <span class="counter">
+              <strong id="countdown-hours">&nbsp;</strong>
+              Hrs
+            </span>
+            <span class="counter">
+              <strong id="countdown-minutes">&nbsp;</strong>
+              Min
+            </span>
+            <span class="counter">
+              <strong id="countdown-seconds">&nbsp;</strong>
+              Sec
+            </span>
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="illustration-holder">
+
+      <div class="illustration">
+        <div class="obelisk"></div>
+      </div>
+
+      <div class="global-stats">
+        <figure class="stat">
+          <div class="stat-number">
+            <strong>35</strong>
+            Speakers
+          </div>
+          <figcaption>Speakers que va a haber en el evento</figcaption>
+        </figure>
+        
+        <figure class="stat">
+          <div class="stat-number">
+            <strong>100</strong>
+            Repos
+          </div>
+          <figcaption>Repos de los que se van a estar hablando</figcaption>
+        </figure>
+
+        <figure class="stat">
+          <div class="stat-number">
+            <strong>56</strong>
+            Pull Requests
+          </div>
+          <figcaption>Pull requests que hubo en la última JSConf</figcaption>
+        </figure>
+
+        <figure class="stat">
+          <div class="stat-number">
+            <strong>25</strong>
+            Forks
+          </div>
+          <figcaption>Forks que se hicieron después del último JSConf</figcaption>
+        </figure>
+      </div>
+
+    </div>
+
+  </header>
+
+
+
+  <section class="section-speakers">
+
+    <div class="container">
+
+      <h1><span class="large-icon icon-speakers"></span> Speakers</h1>
+
+      <ul class="speaker-list">
+        <li class="speaker">
+          <figure>
+            <div class="flag flag-argentina"></div>
+            <img src="images/speaker.jpg" alt="" />
+          </figure>
+          <div class="description">
+            <h2>John Doeson</h2>
+            <p>CEO Upbox</p>
+            <div class="social">
+              <a href="#" class="facebook" target="_blank">&lt;fb&gt;</a>
+              <a href="#" class="twitter" target="_blank">&lt;tw&gt;</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="speaker">
+          <figure>
+            <div class="flag flag-argentina"></div>
+            <img src="images/speaker.jpg" alt="" />
+          </figure>
+          <div class="description">
+            <h2>John Doeson</h2>
+            <p>CEO Upbox</p>
+            <div class="social">
+              <a href="#" class="facebook" target="_blank">&lt;fb&gt;</a>
+              <a href="#" class="twitter" target="_blank">&lt;tw&gt;</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="speaker">
+          <figure>
+            <div class="flag flag-argentina"></div>
+            <img src="images/speaker.jpg" alt="" />
+          </figure>
+          <div class="description">
+            <h2>John Doeson</h2>
+            <p>CEO Upbox</p>
+            <div class="social">
+              <a href="#" class="facebook" target="_blank">&lt;fb&gt;</a>
+              <a href="#" class="twitter" target="_blank">&lt;tw&gt;</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="speaker">
+          <figure>
+            <div class="flag flag-argentina"></div>
+            <img src="images/speaker.jpg" alt="" />
+          </figure>
+          <div class="description">
+            <h2>John Doeson</h2>
+            <p>CEO Upbox</p>
+            <div class="social">
+              <a href="#" class="facebook" target="_blank">&lt;fb&gt;</a>
+              <a href="#" class="twitter" target="_blank">&lt;tw&gt;</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="speaker">
+          <figure>
+            <div class="flag flag-argentina"></div>
+            <img src="images/speaker.jpg" alt="" />
+          </figure>
+          <div class="description">
+            <h2>John Doeson</h2>
+            <p>CEO Upbox</p>
+            <div class="social">
+              <a href="#" class="facebook" target="_blank">&lt;fb&gt;</a>
+              <a href="#" class="twitter" target="_blank">&lt;tw&gt;</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="speaker">
+          <figure>
+            <div class="flag flag-argentina"></div>
+            <img src="images/speaker.jpg" alt="" />
+          </figure>
+          <div class="description">
+            <h2>John Doeson</h2>
+            <p>CEO Upbox</p>
+            <div class="social">
+              <a href="#" class="facebook" target="_blank">&lt;fb&gt;</a>
+              <a href="#" class="twitter" target="_blank">&lt;tw&gt;</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+
+  </section>
+
+
+
+  <section class="section-calendar">
+
+    <div class="container">
+
+      <h1><span class="large-icon icon-calendar"></span> Agenda</h1>
+
+      <div class="calendar-menu">
+        <button class="button active" data-day="november29">Day 01</button>
+        <button class="button" data-day="november30">Day 02</button>
+      </div>
+
+
+      <div class="event-calendar-holder">
+
+        <div class="event-calendar active" data-day="november29">
+
+          <div class="calendar-header">
+            <div class="calendar-name">
+              Noviembre 29
+            </div>
+
+            <div class="calendar-hours">
+              <div class="hour-marker">9</div>
+              <div class="hour-marker">10</div>
+              <div class="hour-marker">11</div>
+              <div class="hour-marker">12</div>
+              <div class="hour-marker">13</div>
+              <div class="hour-marker">14</div>
+              <div class="hour-marker">15</div>
+              <div class="hour-marker">16</div>
+              <div class="hour-marker">17</div>
+              <div class="hour-marker">18</div>
+              <div class="hour-marker">19</div>
+              <div class="hour-marker">20</div>
+              <div class="hour-marker">21</div>
+              <div class="hour-marker">22</div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Hola</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-0900 event-ends-1000"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Check-in/Desayuno</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-0900 event-ends-1100"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Bienvenidos a JSConf!</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-1000 event-ends-1100"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Mike Taylor</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-1100 event-ends-1300"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Guillermo Paz</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-1100 event-ends-1300"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Joaquín Díaz Trepat</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-1130 event-ends-1300"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Almuerzo</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-1300 event-ends-1400"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Santiago Siri</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-1400 event-ends-1600"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Damián Mendez Romera</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-1400 event-ends-1600"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Short Break</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-1600 event-ends-1700"></div>
+            </div>
+          </div>
+
+
+          <div class="event">
+            <h3>Leo Lanese</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-1700 event-ends-1830"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Ignacio López</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-1800 event-ends-2000"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Maximiliano Firtman</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-1800 event-ends-2000"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Juergen Fesslmeier</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-1800 event-ends-2000"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Nicolás García Belmonte</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-1800 event-ends-2000"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Party</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-party event-starts-2000 event-ends-2200">
+                Party!
+                <div class="large-icon icon-party"></div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+
+
+        <div class="event-calendar" data-day="november30">
+
+          <div class="calendar-header">
+            <div class="calendar-name">
+              Noviembre 30
+            </div>
+
+            <div class="calendar-hours">
+              <div class="hour-marker">9</div>
+              <div class="hour-marker">10</div>
+              <div class="hour-marker">11</div>
+              <div class="hour-marker">12</div>
+              <div class="hour-marker">13</div>
+              <div class="hour-marker">14</div>
+              <div class="hour-marker">15</div>
+              <div class="hour-marker">16</div>
+              <div class="hour-marker">17</div>
+              <div class="hour-marker">18</div>
+              <div class="hour-marker">19</div>
+              <div class="hour-marker">20</div>
+              <div class="hour-marker">21</div>
+              <div class="hour-marker">22</div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Hola</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-0900 event-ends-1000"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Check-in/Desayuno</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-0900 event-ends-1100"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Bienvenidos a JSConf!</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-1000 event-ends-1100"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Mike Taylor</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-1100 event-ends-1300"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Guillermo Paz</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-1100 event-ends-1300"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Joaquín Díaz Trepat</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-1130 event-ends-1300"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Almuerzo</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-1300 event-ends-1400"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Santiago Siri</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-1400 event-ends-1600"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Damián Mendez Romera</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-1400 event-ends-1600"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Short Break</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-1600 event-ends-1700"></div>
+            </div>
+          </div>
+
+
+          <div class="event">
+            <h3>Leo Lanese</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-1700 event-ends-1830"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Ignacio López</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-1800 event-ends-2000"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Maximiliano Firtman</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-1800 event-ends-2000"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Juergen Fesslmeier</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-1800 event-ends-2000"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Nicolás García Belmonte</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-starts-1800 event-ends-2000"></div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h3>Party</h3>
+            <div class="event-bar-holder">
+              <div class="event-bar event-party event-starts-2000 event-ends-2200">
+                Party!
+                <div class="large-icon icon-party"></div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+
+  </section>
+
+
+
+  <section class="section-place">
+
+    <div class="place-grid">
+
+      <div class="place-cell-data">
+        <h1>Sede</h1>
+
+        <address class="vcard">
+          <div class="adr">
+            <p><strong>Auditorio Bs As</strong></p>
+            <p>Buenos Aires Design</p>
+            <p class="street-address">Av. Pueyrredon 2501</p>
+          </div>
+        </address>
+      </div>
+
+
+      <div class="place-cell-map">
+        <!--
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3284.7357112517925!2d-58.393266100000005!3d-34.5855533!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaa18fa55699%3A0x7746d21fe65b54d5!2sAv+Pueyrred%C3%B3n+2501%2C+Buenos+Aires%2C+Ciudad+Aut%C3%B3noma+de+Buenos+Aires!5e0!3m2!1sen!2sar!4v1408684490500" width="100%" height="100%" frameborder="0" style="border:0"></iframe>
+        -->
+      </div>
+
+
+      <div class="place-cell-photo">
+        
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <section class="section-tickets">
+
+    <div class="container">
+
+      <h1><span class="large-icon icon-tickets"></span> JSConf2014 Tickets</h1>
+
+
+      <div class="buy-ticket">
+
+        <div class="price">USD 200</div>
+
+        <div class="illustration-tickets">
+          <a class="button" href="#" target="_blank">Comprá tu ticket</a>
+
+          <span class="icon icon-button-thingy"></span>
+        </div>
+
+      </div>
+
+
+      <div class="ticket-includes">
+        <h2>Tu ticket incluye:</h2>
+        <ul>
+          <li>Acceso a la conferencia (2 días)</li>
+          <li>Desayuno, almuerzo y té</li>
+          <li>Transporte grauito desde puntos de la ciudad a la sede</li>
+          <li>Fiesta con barra libre el Sábado</li>
+          <li>JSConf Welcome Kit</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <section class="section-housing">
+
+    <div class="container">
+
+      <h1><span class="large-icon icon-housing"></span> Hoteles Recomendados</h1>
+
+      <ul class="housing-list">
+
+        <li class="housing hotel-maipu">
+          <div class="housing-holder">
+
+            <div class="description">
+              <div class="price-and-rating">
+                <div class="price">99<sup>usd</sup></div>
+                <div class="rating"><span class="icon icon-star"></span><span class="icon icon-star"></span><span class="icon icon-star"></span><span class="icon icon-star"></span></div>
+              </div>
+              <h2>Fën Hoteles:<br/>Dazzler Tower Maipú</h2>
+              <p>Maipú 856 <a href="#" target="_blank">&lt;mapa&gt;</a></p>
+            </div>
+
+          </div>
+        </li>
+
+        <li class="housing hotel-san-martin">
+          <div class="housing-holder">
+
+            <div class="description">
+              <div class="price-and-rating">
+                <div class="price">105<sup>usd</sup></div>
+                <div class="rating"><span class="icon icon-star"></span><span class="icon icon-star"></span><span class="icon icon-star"></span><span class="icon icon-star"></span></div>
+              </div>
+              <h2>Fën Hoteles:<br/>Dazzler Tower San Martín</h2>
+              <p>San Martín 920 <a href="#" target="_blank">&lt;mapa&gt;</a></p>
+            </div>
+
+          </div>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </section>
+
+
+
+  <!--
+  <section class="section-social">
+
+    <div class="container">
+
+      <h1>#JSConf2014</h1>
+      <p>
+        <a href="#" class="facebook" target="_blank">&lt;fb&gt;</a>
+        <a href="#" class="twitter" target="_blank">&lt;tw&gt;</a>
+      </p>
+
+    </div>
+
+    <aside>
+      <ul class="social-feed">
+
+        <li></li>
+
+      </ul>
+    </aside>
+
+  </section>
+  -->
+
+
+
+  <section class="section-sponsors">
+
+    <h1><span class="large-icon icon-sponsors"></span> Nuestros Sponsors</h1>
+    <p>Todo gracias a nuestros asombrosos sponsors del JSConf2014! Transformate en <a href="#">sponsor</a></p>
+
+    <ul class="sponsor-list sponsors-platinum">
+      <li class="sponsor"><a href="http://automattic.com" target="_blank"><img src="images/automattic-logo.png" alt="Automattic" /></a></li>
+      <li class="sponsor"><a href="http://aerolab.co" target="_blank"><img src="images/aerolab-logo.png" alt="Aerolab" /></a></li>
+    </ul>
+
+    <ul class="sponsor-list sponsors-gold">
+      <li class="sponsor"><a href="https://getmango.com" target="_blank"><img src="images/mango-logo.png" alt="Mango" /></a></li>
+      <li class="sponsor"></li>
+      <li class="sponsor"></li>
+      <li class="sponsor"></li>
+    </ul>
+
+    <ul class="sponsor-list sponsors-silver">
+      <li class="sponsor"></li>
+      <li class="sponsor"></li>
+      <li class="sponsor"></li>
+      <li class="sponsor"></li>
+      <li class="sponsor"></li>
+      <li class="sponsor"></li>
+    </ul>
+
+    <ul class="sponsor-list sponsors-startup">
+      <li class="sponsor"></li>
+      <li class="sponsor"></li>
+    </ul>
+
+  </section>
+
+
+
+  <footer class="section-footer">
+
+    <div class="container">
+      <small>JSConf Latin America, todos los derechos reservados 2014 &copy;</small>
+
+      <p>Follow us on <a href="#" target="_blank">Twitter</a> or email us at <a href="mailto:hello@jsconf.com?Subject=Hi!" target="_blank">hello@jsconf.com</a></p>
+
+      <code>&lt;script&gt;delete JSConf;&lt;/script&gt;</code>
+    </div>
+
+
+    <div class="footer-illustration">
+      <!-- Here be dragons. And maybe some octopuses. -->
+    </div>
+
+  </footer>
+
+
+</main>
+
+
+<script>
+  var updateCountdown = function() {
+
+    var jsconfStart = new Date(Date.UTC(2014, 10, 29, 12, 0));
+    var now = new Date();
+
+    var diff = Math.round((jsconfStart.getTime() - now.getTime()) / 1000);
+    var days = Math.floor(diff / (60*60*24));
+    var hours = Math.floor(diff % (60*60*24) / (60*60));
+    var minutes = Math.floor(diff % (60*60*24) % (60*60) / 60);
+    var seconds = Math.floor(diff % (60*60*24) % (60*60) % 60);
+
+    document.getElementById('countdown-days').innerHTML = days;
+    document.getElementById('countdown-hours').innerHTML = hours;
+    document.getElementById('countdown-minutes').innerHTML = minutes;
+    document.getElementById('countdown-seconds').innerHTML = seconds;
+
+    setTimeout(updateCountdown, 1000);
+  };
+
+  updateCountdown();
+</script>
+
+<script src="js/zepto.min.js"></script>
+<script src="js/scripts.js"></script>
+
+
+
 </body>
 </html>
