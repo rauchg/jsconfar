@@ -95,6 +95,7 @@ a.button, button.button
   font-size: 18px
   font-weight: bold
   padding: 30px 35px
+  text-align: center
 
   @include transition(background-color, $timing, $easing)
 
@@ -111,3 +112,19 @@ a.button, button.button
 
     &:hover
       background: lighten($yellow, 10%)
+
+  &.button-disabled
+    cursor: default
+    background: $gray
+    color: darken($gray, 30%)
+    &:hover
+      background: $gray
+
+  &.button-cta
+    @extend .button-secondary
+    border: 2px solid $blue
+    border-radius: 3px
+
+.cta-holder
+  text-align: center
+  padding: 30px 0

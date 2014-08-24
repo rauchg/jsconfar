@@ -16,6 +16,24 @@
   .speaker
     width: 50%
 
+  .place-grid
+    height: auto
+
+    .place-cell-data, .place-cell-map, .place-cell-photo
+      position: relative
+      width: auto
+      height: auto
+
+    .place-cell-data
+      padding-left: 30px
+      padding-bottom: 30px
+
+    .place-cell-map
+      height: 200px
+
+    .place-cell-photo
+      display: none
+
 @media only screen and (min-width: 800px) and (max-width: 960px)
   .speaker-list
     max-width: 720px
@@ -24,7 +42,7 @@
 @media only screen and (max-width: 820px)
   .main-menu
     max-width: 402px
-    padding: 79px 0 37px
+    //padding: 79px 0 37px
 
     .tickets,
     .video
@@ -109,7 +127,7 @@
 
 @media only screen and (max-width: 370px)
   .main-menu
-    padding: 158px 0 37px
+    //padding: 158px 0 37px
 
     .tickets, 
     .video
