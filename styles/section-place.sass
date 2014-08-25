@@ -1,11 +1,11 @@
 // The place
 .section-place
-  background: $gray
+  background: $brownish
 
 
 .place-grid
   position: relative
-  max-width: 1200px
+  max-width: 1920px
   margin: 0 auto
   height: 510px
 
@@ -55,6 +55,15 @@
     bottom: 0
     background: $gray
     overflow: hidden
+
+    .map-holder
+      width: 100%
+      height: 100%
+
+      // We've been naughty
+      .gm-style 
+        > .gm-style-cc//, > .gmnoprint > .gm-style-cc
+          display: none !important
 
     .map-cover
       position: absolute

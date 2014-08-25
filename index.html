@@ -153,8 +153,7 @@
 
 
       <div class="place-cell-map">
-        <div class="map-cover"></div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3284.7357112517925!2d-58.393266100000005!3d-34.5855533!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaa18fa55699%3A0x7746d21fe65b54d5!2sAv+Pueyrred%C3%B3n+2501%2C+Buenos+Aires%2C+Ciudad+Aut%C3%B3noma+de+Buenos+Aires!5e0!3m2!1sen!2sar!4v1408684490500" width="100%" height="100%" frameborder="0" style="border:0"></iframe>
+        <div class="map-holder" id="map-holder"></div>
       </div>
 
 
@@ -205,6 +204,7 @@
 
 
 <script>
+  // https://www.youtube.com/watch?v=9jK-NcRmVcw
   var updateCountdown = function() {
 
     var jsconfStart = new Date(Date.UTC(2014, 10, 29, 12, 0));
@@ -225,6 +225,59 @@
   };
 
   updateCountdown();
+</script>
+
+
+<script type="text/javascript">
+  // Google Maps
+  function initialize_map() {
+
+    var place = new google.maps.LatLng(-34.585595, -58.393225);
+
+    var map = new google.maps.Map(document.getElementById("map-holder"), {
+      center: place,
+      zoom: 16,
+      scrollwheel: false,
+      draggable: true,
+      scaleControl: true,
+      navigationControl: false,
+      mapTypeControl: false,
+      streetViewControl: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var marker = new google.maps.Marker({
+      position: place,
+      icon: {
+        url: "styles/images/sprite.png", 
+        size: new google.maps.Size(53, 58), 
+        anchor: new google.maps.Point(27, 58),
+        origin: new google.maps.Point(230, 0),
+        scaledSize: new google.maps.Size(500, 250)
+      },
+      map: map
+    });
+
+    // Keep it centered on resize
+    window.onresize = function(){
+      google.maps.event.trigger(map, 'resize');
+      map.setCenter(place);
+    };
+
+  }
+
+
+  // Async Loading for the map
+  function loadGoogleMaps() {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.async = 1;
+    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initialize_map';
+    document.body.appendChild(script);
+  }
+
+  window.onload = loadGoogleMaps;
+
 </script>
 
 <!--
