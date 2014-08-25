@@ -43,7 +43,7 @@
         <address class="vcard">
           <time datetime="2014-11-29T09:00-03:00">
             <span class="icon icon-date"></span> 
-            Noviembre 29
+            November 29
           </time>
           <span class="adr">
             <span class="icon icon-place"></span>
@@ -52,28 +52,22 @@
         </address>
 
 
-        <div class="hello">Hello Bs As</div>
+        <div class="hello">Hello Bs As!</div>
 
         <code>&lt;script src=&quot;JSConf2014.js&quot;&gt;&lt;/script&gt;</code>
 
 
+        <form class="signup-form" action="http://beta.mailchimp.com/subscribe.phtml" method="post" target="_blank">
+          <div class="input-group">
+            <input type="email" name="EMAIL" value="" placeholder="Stay up-to-date on JSConf" />
+            <span class="submit"><button type="submit"><span class="icon icon-send-yellow"></span></button></span>
+          </div>
+          <input type="hidden" name="submit" value="Subscribe" />
+          <input type="hidden" name="id" value="8c9110b9d4" />
+        </form>
+
+
         <div class="main-menu">
-
-          <!--
-          <div class="tickets">
-            <a class="button button-primary" href="#">
-              <span class="icon icon-tickets-yellow"></span>
-              Entradas
-            </a>
-          </div>
-
-          <div class="video">
-            <a class="button button-secondary" href="#">
-              <span class="icon icon-video"></span>
-              Video 2013
-            </a>
-          </div>
-          -->
 
           <div class="countdown">
             <span class="counter">
@@ -107,42 +101,6 @@
         <div class="obelisk"></div>
       </div>
 
-      <!--
-      <div class="global-stats">
-        <figure class="stat">
-          <div class="stat-number">
-            <strong>35</strong>
-            Speakers
-          </div>
-          <figcaption>Speakers que va a haber en el evento</figcaption>
-        </figure>
-        
-        <figure class="stat">
-          <div class="stat-number">
-            <strong>100</strong>
-            Repos
-          </div>
-          <figcaption>Repos de los que se van a estar hablando</figcaption>
-        </figure>
-
-        <figure class="stat">
-          <div class="stat-number">
-            <strong>56</strong>
-            Pull Requests
-          </div>
-          <figcaption>Pull requests que hubo en la última JSConf</figcaption>
-        </figure>
-
-        <figure class="stat">
-          <div class="stat-number">
-            <strong>25</strong>
-            Forks
-          </div>
-          <figcaption>Forks que se hicieron después del último JSConf</figcaption>
-        </figure>
-      </div>
-      -->
-
     </div>
 
   </header>
@@ -155,8 +113,20 @@
 
       <h1><span class="large-icon icon-speakers"></span> Speakers</h1>
 
+      <p>We're bringing together a fantastic team of speakers from all over the world for JSConf Argentina 2014.</p>
+      <p>Leave us your email to be the first to know!</p>
+
+      <form class="signup-form" action="http://beta.mailchimp.com/subscribe.phtml" method="post" target="_blank">
+        <div class="input-group">
+          <input type="email" name="EMAIL" value="" placeholder="Stay up-to-date on JSConf" />
+          <span class="submit"><button type="submit"><span class="icon icon-send-yellow"></span></button></span>
+        </div>
+        <input type="hidden" name="submit" value="Subscribe" />
+        <input type="hidden" name="id" value="8c9110b9d4" />
+      </form>
+
       <div class="cta-holder">
-        <a class="button button-cta" href="mailto:speakers@jsconfar.com?Subject=Quiero%20ser%20speaker">Quiero ser speaker</a>
+        <a class="button button-cta" href="mailto:speakers@jsconfar.com?Subject=I%20want%20to%20speak" target="_blank">I want to speak</a>
       </div>
 
     </div>
@@ -170,7 +140,7 @@
     <div class="place-grid">
 
       <div class="place-cell-data">
-        <h1>Sede</h1>
+        <h1>The Place</h1>
 
         <address class="vcard">
           <div class="adr">
@@ -200,10 +170,13 @@
 
   <section class="section-sponsors">
 
-    <h1><span class="large-icon icon-sponsors"></span> Nuestros Sponsors</h1>
+    <h1><span class="large-icon icon-sponsors"></span> Become a Sponsor</h1>
+
+    <p>Become a part of JSConf! We can accomodate everyone, from startups to large companies.</p>
+    <p>Contact us for more info</p>
 
     <div class="cta-holder">
-      <a class="button button-cta" href="mailto:sponsors@jsconfar.com?Subject=Quiero%20ser%20sponsor">Quiero ser sponsor</a>
+      <a class="button button-cta" href="mailto:sponsors@jsconfar.com?Subject=I%20want%20to%20sponsor" target="_blank">I want to sponsor</a>
     </div>
 
   </section>
@@ -213,7 +186,7 @@
   <footer class="section-footer">
 
     <div class="container">
-      <small>JSConf Latin America, todos los derechos reservados 2014 &copy;</small>
+      <small>JSConf Latin America, all rights reserved &copy; 2014</small>
 
       <p>Follow us on <a href="#" target="_blank">Twitter</a> or email us at <a href="mailto:hello@jsconf.com?Subject=Hi!" target="_blank">hello@jsconf.com</a></p>
 
@@ -254,10 +227,10 @@
   updateCountdown();
 </script>
 
+<!--
 <script src="js/zepto.min.js"></script>
 <script src="js/scripts.js"></script>
-
-
+-->
 
 </body>
 </html>

@@ -12,6 +12,11 @@
     background-position: 0 0
 
 
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+  .sprite
+    background-image: url(images/sprite@2x.png)
+
+
 .icon
   @extend .sprite
   width: 20px
@@ -29,6 +34,10 @@
     background-position: -90px -110px
   &.icon-star
     background-position: -128px -109px
+  &.icon-send-yellow
+    width: 25px
+    height: 23px
+    background-position: -160px -110px
 
 
 .large-icon
