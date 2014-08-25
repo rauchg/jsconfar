@@ -58,6 +58,19 @@
   .countdown
     margin: 0
 
+@media only screen and (max-width: 780px)
+  .illustration
+    background-image: url(images/illustration-mobile.png)
+    margin-top: -30px
+    height: 190px
+
+    .obelisk
+      background-image: url(images/obelisk-mobile.png)
+      width: 35px
+      height: 175px
+      top: -50px
+      margin-left: -17.5px
+
 @media only screen and (max-width: 670px)
   .speaker-list
     margin: 0 auto
@@ -153,3 +166,35 @@
         height: 70px
         font-size: 30px
         line-height: 75px
+
+
+// Retina
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)
+  .illustration
+    background-image: url(images/illustration@2x.png)
+
+    background-size: 1300px 602px
+
+    .obelisk
+      background-image: url(images/obelisk@2x.png)
+
+      background-size: 43px 215px
+
+  .flag
+    background-image: url(images/flags@2x.png)
+
+    background-size: 300px 30px
+
+// Retina 780px para abajo
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 780px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 780px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 780px), only screen and (min-device-pixel-ratio: 2) and (max-width: 780px), only screen and (min-resolution: 192dpi) and (max-width: 780px), only screen and (min-resolution: 2dppx) and (max-width: 780px)
+  .illustration
+    background-image: url(images/illustration-mobile@2x.png)
+
+    background-size: 1300px 190px
+
+    .obelisk
+      background-image: url(images/obelisk-mobile@2x.png)
+
+      background-size: 35px 175px
