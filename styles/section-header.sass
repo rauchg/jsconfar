@@ -1,0 +1,204 @@
+// An awesome illustration. Also, the header.
+
+.section-header
+  text-align: center
+
+  .logo
+    margin-bottom: 50px
+
+  address
+    margin-bottom: 32px
+    padding-top: 4px
+    font-size: 18px
+    font-style: normal
+
+  time,
+  .adr
+    margin: 0 3px
+
+  time
+    color: #585549
+
+  .adr
+    color: $text
+
+  .hello
+    margin-bottom: 25px
+    font-size: 36px
+    font-weight: bold
+
+  code
+    margin-bottom: 32px
+
+
+.intro-holder
+  padding-top: 30px
+  background: #FFC20D url(images/illustration-sky.png) no-repeat 50% 100%
+
+
+h1.logo
+  display: block
+  margin: 0 auto
+
+
+.main-menu
+  // I'm so sorry
+  position: relative
+  max-width: 800px
+  margin: 0 auto
+  padding-bottom: 37px
+
+  .tickets, 
+  .video
+    position: absolute
+    top: 0
+    width: 202px
+    border: 2px solid $brownish
+
+    .button
+      display: block
+      width: 100%
+      padding-left: 10px
+      padding-right: 10px
+      height: 77px
+
+  .tickets
+    left: 0
+
+  .video
+    right: 0
+
+
+.countdown
+  margin: 0 200px
+  overflow: hidden
+
+  .counter
+    width: 25%
+    float: left
+    border: 1px solid $brownish
+    border-top-width: 2px
+    border-bottom-width: 2px
+    
+    font-size: 18px
+    font-weight: bold
+    line-height: 26px
+    text-transform: uppercase
+    color: $brownish
+
+    strong
+      display: block
+      color: $blue
+      height: 79px
+      font-size: 38px
+      line-height: 82px
+      overflow: hidden
+      border-bottom: 2px solid $brownish
+      margin-bottom: 2px
+
+    &:first-child
+      border-left-width: 2px
+    &:last-child
+      border-right-width: 2px
+
+
+// The large illustration in the header
+.illustration-holder
+  border-top: 2px solid #0e374e
+  background: $blue
+  z-index: 10
+
+.illustration
+  position: relative
+  background: url(images/illustration.png) no-repeat 50% 0%
+  margin-top: -39px
+  height: 590px
+  padding: 1px
+
+  .obelisk
+    position: absolute
+    background: url(images/obelisk.png) no-repeat 0 0
+    width: 43px
+    height: 215px
+    top: -60px
+    left: 50%
+    margin-left: -21.5px
+
+
+
+
+.global-stats
+  max-width: 980px
+  margin: 0 auto
+  color: $white
+  text-align: center
+  overflow: hidden
+  padding-bottom: 30px
+
+  .stat
+    margin: 0
+    width: 25%
+    float: left
+
+    &:first-child .stat-number
+      border-left: 2px solid #0e374e
+
+
+    .stat-number
+      background: #298b93
+      padding: 33px 5px 33px 5px
+      border: 2px solid #0e374e
+      border-left: none
+      font-weight: bold
+
+      strong
+        display: block
+        font-size: 58px
+        line-height: 100%
+
+    figcaption
+      font-size: 14px
+      color: #00c2d3
+      padding: 25px 10px
+
+
+.signup-form
+  max-width: 400px
+  margin: 0 auto
+  margin-bottom: 30px
+
+  .input-group
+    display: table
+    width: 100%
+
+  input
+    display: table-cell
+    padding: 13px 15px
+    width: 100%
+    height: 46px
+    margin: 0
+    line-height: 20px
+    background: $white
+    border: 2px solid $brownish
+    vertical-align: top
+
+  .submit
+    display: table-cell
+    width: 1%
+    vertical-align: top
+
+  button
+    display: block
+    cursor: pointer
+    height: 46px
+    padding: 0px 10px
+    margin: 0
+    border: 2px solid $brownish
+    color: $yellow
+    font-weight: bold
+    background: $brownish
+    border-left: none
+    vertical-align: top
+
+    &:hover, &:focus
+      background: lighten($brownish, 3%)

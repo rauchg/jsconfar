@@ -1,0 +1,161 @@
+// The calendar for both days of JSConf
+
+$hour_start: 9
+$hour_end: 22
+
+.section-calendar
+  background: $blue
+  color: $white
+  padding: 60px 0
+
+
+
+.calendar-menu
+  float: right
+  border: 2px solid $darkBlue
+  margin-top: 14px
+  margin-bottom: 34px
+  margin-right: 5px
+
+  .button
+    display: block
+    float: left
+    font-size: 16px
+    font-weight: normal
+    padding: 12px 14px
+    background: $blue
+    color: $aqua
+
+    &.active
+      color: $white
+      background: $lightAqua
+
+
+
+$calendar_name_width: 225px
+.event-calendar-holder
+  position: relative
+  clear: both
+
+  .event-calendar
+    display: none
+
+  .event-calendar.active
+    display: block
+
+
+.event-calendar
+  position: relative
+  clear: both
+
+  .calendar-header
+    height: 37px
+
+  .calendar-name
+    font-size: 20px
+    width: $calendar_name_width
+    float: left
+
+  .calendar-hours
+    margin-left: $calendar_name_width
+
+    $marker_width: 100.0% / ($hour_end - $hour_start + 1)
+
+    .hour-marker
+      float: left
+      font-size: 16px
+      text-align: center
+      width: $marker_width
+      text-indent: -$marker_width
+
+      &::after
+        display: block
+        content: ""
+        position: absolute
+        width: 2px
+        overflow: hidden
+        background: $darkBlue
+        pointer-events: none
+        top: 25px
+        bottom: 0px
+        z-index: 0
+
+
+  .event
+
+    h3
+      float: left
+      width: $calendar_name_width
+      font-size: 14px
+      line-height: 28px
+      border-top: 2px solid $darkBlue
+
+  .event-bar-holder
+    position: relative
+    margin-left: $calendar_name_width
+    height: 30px
+    z-index: 100
+
+  .event-bar
+    position: absolute
+    display: block
+    background: $yellow
+    top: 2px
+    bottom: 0px
+
+    &.event-party
+      background: $orange
+      line-height: 28px
+      text-indent: 12px
+
+      .large-icon
+        position: absolute
+        top: -20px
+        right: -35px
+
+
+$calendar_timing: 250ms
+.event-calendar
+  transition: transform $calendar_timing ease-out, opacity $calendar_timing linear
+
+
+  &.active
+    transform: translateX(0%)
+    opacity: 1.0
+
+    &.animate-right
+      transform: translateX(+6%)
+      transition: transform $calendar_timing ease-out, opacity $calendar_timing linear
+      opacity: 0.0
+
+    &.animate-left
+      transform: translateX(-6%)
+      transition: transform $calendar_timing ease-in, opacity $calendar_timing linear
+      opacity: 0.0
+
+
+
+// These classes define when an event bar starts or ends
+$minutes: 0 30
+
+@function pad_time($time)
+  @if $time < 10
+    @return #{0}#{$time}
+  @else
+    @return #{$time}
+
+
+@for $hour from $hour_start through ($hour_end - 1)
+  @each $minute in $minutes
+    $offset: (($hour - $hour_start) / ($hour_end - $hour_start + 1)) * 100.0% + ($minute / 60.0) / ($hour_end - $hour_start + 1) * 100.0%
+
+    .event-starts-#{pad_time($hour)}#{pad_time($minute)}
+      left: $offset
+    .event-ends-#{pad_time($hour)}#{pad_time($minute)}
+      right: 100.0% - $offset
+
+.event-starts-#{pad_time($hour_end)}00
+  left: 100% - 100.0% / ($hour_end - $hour_start + 1)
+.event-ends-#{pad_time($hour_end)}00
+  right: 100.0% / ($hour_end - $hour_start + 1)
+

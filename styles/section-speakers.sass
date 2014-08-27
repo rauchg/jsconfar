@@ -1,0 +1,82 @@
+
+// Speakers (The talking kind, not the ones you plug into your computer)
+.section-speakers
+  background: $white
+  color: $text
+  padding: 60px 0
+
+  h1
+    margin-bottom: 30px
+
+  .signup-form
+    margin-top: 30px
+
+.speaker-list
+  @extend ul.block-list
+  padding: 2px 4px 0 12px
+  margin: 0 -20px
+
+.speaker
+  display: block
+  width: $one-third
+  float: left
+  border: 2px solid $gray
+  margin: -2px 0 0 -2px
+
+  figure
+    float: left
+    margin: 0
+    position: relative
+    width: 128px
+    height: 128px
+
+    img
+      display: block
+      width: 100%
+      height: 100%
+
+  .flag
+    position: absolute
+    top: 0
+    left: 0
+
+  .description
+    margin-left: 128px
+    padding: 17px 20px 0 20px
+
+  h2
+    font-size: 20px
+    margin-bottom: 6px
+    font-weight: bold
+
+  p
+    font-size: 20px
+
+  .social
+    margin-top: 20px
+
+  a.facebook
+    color: $facebookBlue
+
+  a.twitter
+    color: $twitterBlue
+
+
+
+.flag
+  width: 30px
+  height: 30px
+  overflow: hidden
+  background: url(images/flags.png) no-repeat -1000px -1000px
+
+  &.flag-argentina
+    background-position: -0px -0px
+
+  &.flag-usa
+    background-position: -0px -30px
+
+  &.flag-brasil
+    background-position: -0px -60px
+
+  &.flag-spain
+    background-position: -0px -90px

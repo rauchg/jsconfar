@@ -1,43 +1,348 @@
 <!DOCTYPE html>
-<html>
+<html lang="es" prefix="og: http://ogp.me/ns#">
 <head>
-  <meta charset="utf-8">
-  <title>JSConf.ar – 29 de Noviembre 2014</title>
-  <link href="style.css" rel="stylesheet" type="text/css">
-  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
+
+  <!--
+  `---`   ---/++++++++++++++++++++++++++++++++-                                                     
+  -+:` `-++sdNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN+                                                     
+  `` `-++sdNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN+                                                     
+   `-++sdNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN+                                                     
+  .++sdNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN+                                                     
+  -smNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN+                                                     
+  +NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN+                                                     
+  +NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN+                                                     
+  +NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN+                                                     
+  +NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN+                                                     
+  +NNNNNNNNNNNNNNNNNNNysssdNNNNNhso++oymNNNNNN+                                                     
+  +NNNNNNNNNNNNNNNNNNN+...sNNNh:........+mNNNN+                                                     
+  +NNNNNNNNNNNNNNNNNNN+...sNNd...-ydds-+hmNNNN+                                                     
+  +NNNNNNNNNNNNNNNNNNN/...sNNd...-hNNNNNNNNNNN+       `:/++/-                              `:osso-  
+  +NNNNNNNNNNNNNNNNNNN/...sNNNs....-/oymNNNNNN+     .yNmysyNNh`                           :mNy//+.  
+  +NNNNNNNNNNNNNNNNNNN/...sNNNNdo:....../hNNNN+     hNm.   ymd.  :oyhhy+`  .yy+.oyhy-  /yydNNhyys   
+  +NNNNNNNNNNNNNNNNNNN+...sNNNNNNNmhs/....hNNN+    .NNy        `dNd/-/mNd  /NNh+:+NNh  -:/NNd:::-   
+  +NNNNNNNNNNNNNdyNNNN/...yNNmhohNNNNNo...+NNN+    /NN/    ``  +NN/  `mNd  yNN.  -NNo    :NN+       
+  +NNNNNNNNNNNy:..:os+...-dNd:.../oss+-...yNNN+    sNN:   sNm: hNN.  :NNo `mNd   +NN:    sNN-       
+  +NNNNNNNNNNNNs:......./dNNNmo:.......-/hNNNN+    -dNmhhmNd:  /mNdyymms` :NNo   hNm`    dNm        
+  +NNNNNNNNNNNNNNmhyyyhmNNNNNNNNmhyyyhdmNNNNNN+      .::::.     `-:::-`   .::`   ---    .NNs        
+  +NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN+                                         /mm/        
+  `-------------------------------------------`                                                     
+  -->
+
+  <meta charset="utf-8" />
+
+  <title>JSConf Buenos Aires - Conferences for the Javascript Community</title>
+  <meta name="description" content="JSConf Argentina will be a full day event on the November 29, with programmers and designers from all over the world" />
+  <meta name="keywords" content="jsconf, javascript, conference, development, buenos aires, argentina, programming" />
+  <meta name="robots" content="INDEX, FOLLOW" />
+  <meta name="author" content="Aerolab" />
+  <meta name="geo.placename" content="Buenos Aires" />
+  <meta name="geo.region" content="AR" />
+
+  <link rel="canonical" href="http://www.jsconfar.com" />
+
+  <!-- Facebook Stuff -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="JSConf Argentina" />
+  <meta property="og:title" content="JSConf Buenos Aires 2014" />
+  <meta property="og:description" content="JSConf Argentina will be a full day event on the November 29, with programmers and designers from all over the world" />
+  <meta property="og:image" content="http://www.jsconfar.com/styles/images/jsconf_argentina_logo.png" />
+  <meta property="og:url" content="http://www.jsconfar.com" />
+  <meta property="fb:app_id" content="851866321490729" />
+  
+  <!-- Twitter Stuff -->
+  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:site" content="@jsconfar" />
+  <meta property="twitter:title" content="JSConf Buenos Aires 2014" />
+  <meta property="twitter:description" content="JSConf Argentina will be a full day event on the November 29, with programmers and designers from all over the world" />
+  <meta property="twitter:image" content="http://www.jsconfar.com/styles/images/jsconf_argentina_logo.png" />
+  <meta property="twitter:url" content="http://www.jsconfar.com" />
+
+  <link rel="icon" href="styles/images/favicon.png" type="image/png" />
+  <link rel="shortcut icon" href="styles/images/favicon.png" type="image/png" />
+
+  <link rel="stylesheet" href="styles/styles.css" />
+  <meta name="viewport" content="width=device-width" />
+  
+  <meta name="X-UA-Compatible" content="IE=edge" />
+  <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+  <meta name="apple-mobile-web-app-capable" content="no" />
+
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-30114730-1', 'jsconfar.com');
+    ga('require', 'displayfeatures');
+    ga('require', 'linkid', 'linkid.js');
+    ga('send', 'pageview');
+  </script>
+
 </head>
 <body>
 
-  <div class="logo" id="logo-main">
-    <div class="logo-square"></div>
-    <div class="logo-stripe logo-stripe-1"></div>
-    <div class="logo-stripe logo-stripe-2"></div>
-    <div class="logo-stripe logo-stripe-3"></div>
-    <div class="logo-type"></div>
-  </div>
-  
-  <h1><span class="black">Buenos Aires</span> <span class="black">29 de Noviembre</span></h1>
-  
-  <video loop poster="">
-  </video>
-  
-  <script>
-    var hh = new Date().getHours();
-    var day = '#toggle' != location.hash && (hh >= 6 && hh <= 18);
-    var body = document.body;
-    var video = document.querySelector('video');
-    var source = document.createElement('source');
-    if (day) {
-      body.className = 'day';
-      video.poster = 'https://i.cloudup.com/tBhSocCpQa-3000x3000.jpeg';
-      source.src = 'https://i.cloudup.com/fGNLXBDArb.mp4';
-    } else {
-      body.className = 'night';
-      video.poster = 'http://i.cloudup.com/FuYm5W2VCf-3000x3000.jpeg';
-      source.src = 'https://i.cloudup.com/0RF0wdSFbc.mp4';
-    }
-    video.appendChild(source);
-    video.autoplay = true;
-  </script>
+<div class="site-overlay"></div>
+
+<main>
+
+
+  <header class="section-header">
+
+    <div class="intro-holder">
+
+      <div class="container">
+
+        <h1 class="sprite logo"><span class="screenreader">JSConf</span></h1>
+
+        <address class="vcard">
+          <time datetime="2014-11-29T09:00-03:00">
+            <span class="icon icon-date"></span> 
+            November 29
+          </time>
+          <span class="adr">
+            <span class="icon icon-place"></span>
+            <span class="street-address">Buenos Aires</span>
+          </span>
+        </address>
+
+
+        <div class="hello">Hello Bs As!</div>
+
+        <code>&lt;script src=&quot;JSConf2014.js&quot;&gt;&lt;/script&gt;</code>
+
+
+        <form class="signup-form" action="http://devthought.us4.list-manage.com/subscribe/post?u=33875ea2facba4ce8d8bc0d66&amp;id=8c9110b9d4" validate method="post" target="_blank">
+          <div class="input-group">
+            <input type="email" name="EMAIL" value="" placeholder="Stay up-to-date on JSConf" required />
+            <span class="submit"><button type="submit"><span class="icon icon-send-yellow"></span></button></span>
+          </div>
+          <input type="hidden" name="b_33875ea2facba4ce8d8bc0d66_8c9110b9d4" tabindex="-1" value="">
+          <input type="hidden" name="subscribe" value="Subscribe" />
+        </form>
+
+
+        <div class="main-menu">
+
+          <div class="countdown">
+            <span class="counter">
+              <strong id="countdown-days">&nbsp;</strong>
+              Days
+            </span>
+            <span class="counter">
+              <strong id="countdown-hours">&nbsp;</strong>
+              Hrs
+            </span>
+            <span class="counter">
+              <strong id="countdown-minutes">&nbsp;</strong>
+              Min
+            </span>
+            <span class="counter">
+              <strong id="countdown-seconds">&nbsp;</strong>
+              Sec
+            </span>
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="illustration-holder">
+
+      <div class="illustration">
+        <div class="obelisk"></div>
+      </div>
+
+    </div>
+
+  </header>
+
+
+
+  <section class="section-speakers">
+
+    <div class="container">
+
+      <h1><span class="large-icon icon-speakers"></span> Speakers</h1>
+
+      <p>We're bringing together a fantastic team of speakers from all over the world for JSConf Argentina 2014.</p>
+      <p>Leave us your email to be the first to know!</p>
+
+      <form class="signup-form" action="http://devthought.us4.list-manage.com/subscribe/post?u=33875ea2facba4ce8d8bc0d66&amp;id=8c9110b9d4" validate method="post" target="_blank">
+        <div class="input-group">
+          <input type="email" name="EMAIL" value="" placeholder="Stay up-to-date on JSConf" required />
+          <span class="submit"><button type="submit"><span class="icon icon-send-yellow"></span></button></span>
+        </div>
+        <input type="hidden" name="b_33875ea2facba4ce8d8bc0d66_8c9110b9d4" tabindex="-1" value="">
+        <input type="hidden" name="subscribe" value="Subscribe" />
+      </form>
+
+      <div class="cta-holder">
+        <a class="button button-cta" href="mailto:rauchg@gmail.com?Subject=I%20want%20to%20speak" target="_blank">I want to speak</a>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <section class="section-place">
+
+    <div class="place-grid">
+
+      <div class="place-cell-data">
+        <h1>The Venue</h1>
+
+        <address class="vcard">
+          <div class="adr">
+            <p><strong>Auditorio Bs As</strong></p>
+            <p>Buenos Aires Design</p>
+            <p class="street-address">Av. Pueyrredon 2501</p>
+          </div>
+        </address>
+      </div>
+
+
+      <div class="place-cell-map">
+        <div class="map-holder" id="map-holder"></div>
+      </div>
+
+
+      <div class="place-cell-photo">
+        
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <section class="section-sponsors">
+
+    <h1><span class="large-icon icon-sponsors"></span> Become a Sponsor</h1>
+
+    <p>Become a part of JSConf! We can accomodate everyone, from startups to large companies.</p>
+    <p>Contact us for more info</p>
+
+    <div class="cta-holder">
+      <a class="button button-cta" href="mailto:rauchg@gmail.com?Subject=I%20want%20to%20sponsor" target="_blank">I want to sponsor</a>
+    </div>
+
+  </section>
+
+
+
+  <footer class="section-footer">
+
+    <div class="container">
+      <small>JSConf Latin America, all rights reserved &copy; 2014</small>
+
+      <p>Follow us on <a href="https://twitter.com/jsconfar" target="_blank">Twitter</a> or email us at <a href="mailto:rauchg@gmail.com?Subject=Hi!" target="_blank">rauchg@gmail.com</a></p>
+
+      <code>&lt;script&gt;JSConf.end();&lt;/script&gt;</code>
+    </div>
+
+
+    <div class="footer-illustration">
+      <!-- Here be dragons. And maybe some octopuses. -->
+    </div>
+
+    <div class="footer-author">
+      <p class="author">Crafted by <a href="http://aerolab.co" target="_blank">aerolab</a><span class="icon icon-aerolab"></span></p>
+    </div>
+
+  </footer>
+
+
+</main>
+
+
+<script>
+  // https://www.youtube.com/watch?v=9jK-NcRmVcw
+  var updateCountdown = function() {
+
+    var jsconfStart = new Date(Date.UTC(2014, 10, 29, 12, 0));
+    var now = new Date();
+
+    var diff = Math.round((jsconfStart.getTime() - now.getTime()) / 1000);
+    var days = Math.floor(diff / (60*60*24));
+    var hours = Math.floor(diff % (60*60*24) / (60*60));
+    var minutes = Math.floor(diff % (60*60*24) % (60*60) / 60);
+    var seconds = Math.floor(diff % (60*60*24) % (60*60) % 60);
+
+    document.getElementById('countdown-days').innerHTML = days;
+    document.getElementById('countdown-hours').innerHTML = hours;
+    document.getElementById('countdown-minutes').innerHTML = minutes;
+    document.getElementById('countdown-seconds').innerHTML = seconds;
+
+    setTimeout(updateCountdown, 1000);
+  };
+
+  updateCountdown();
+</script>
+
+
+<script type="text/javascript">
+  // Google Maps
+  function initialize_map() {
+
+    var place = new google.maps.LatLng(-34.585595, -58.393225);
+
+    var map = new google.maps.Map(document.getElementById("map-holder"), {
+      center: place,
+      zoom: 16,
+      scrollwheel: false,
+      draggable: true,
+      scaleControl: true,
+      navigationControl: false,
+      mapTypeControl: false,
+      streetViewControl: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var marker = new google.maps.Marker({
+      position: place,
+      icon: {
+        url: "styles/images/sprite.png", 
+        size: new google.maps.Size(53, 58), 
+        anchor: new google.maps.Point(27, 58),
+        origin: new google.maps.Point(230, 0),
+        scaledSize: new google.maps.Size(500, 250)
+      },
+      map: map
+    });
+
+    // Keep it centered on resize
+    window.onresize = function(){
+      google.maps.event.trigger(map, 'resize');
+      map.setCenter(place);
+    };
+
+  }
+
+
+  // Async Loading for the map
+  function loadGoogleMaps() {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.async = 1;
+    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initialize_map';
+    document.body.appendChild(script);
+  }
+
+  window.onload = loadGoogleMaps;
+
+</script>
+
+<!--
+<script src="js/zepto.min.js"></script>
+<script src="js/scripts.js"></script>
+-->
+
 </body>
 </html>
