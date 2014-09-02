@@ -114,7 +114,7 @@
 
         <form class="signup-form" action="http://devthought.us4.list-manage.com/subscribe/post?u=33875ea2facba4ce8d8bc0d66&amp;id=8c9110b9d4" validate method="post" target="_blank">
           <div class="input-group">
-            <input type="email" name="EMAIL" value="" placeholder="Stay up-to-date on JSConf" required />
+            <input type="email" name="EMAIL" value="" placeholder="Keep me posted about JSConf News" required />
             <span class="submit"><button type="submit"><span class="icon icon-send-yellow"></span></button></span>
           </div>
           <input type="hidden" name="b_33875ea2facba4ce8d8bc0d66_8c9110b9d4" tabindex="-1" value="">
@@ -277,63 +277,8 @@
   updateCountdown();
 </script>
 
-
-<script type="text/javascript">
-  // Google Maps
-  function initialize_map() {
-
-    var place = new google.maps.LatLng(-34.585595, -58.393225);
-
-    var map = new google.maps.Map(document.getElementById("map-holder"), {
-      center: place,
-      zoom: 16,
-      scrollwheel: false,
-      draggable: true,
-      scaleControl: true,
-      navigationControl: false,
-      mapTypeControl: false,
-      streetViewControl: false,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    });
-
-    var marker = new google.maps.Marker({
-      position: place,
-      icon: {
-        url: "styles/images/sprite.png", 
-        size: new google.maps.Size(53, 58), 
-        anchor: new google.maps.Point(27, 58),
-        origin: new google.maps.Point(230, 0),
-        scaledSize: new google.maps.Size(500, 250)
-      },
-      map: map
-    });
-
-    // Keep it centered on resize
-    window.onresize = function(){
-      google.maps.event.trigger(map, 'resize');
-      map.setCenter(place);
-    };
-
-  }
-
-
-  // Async Loading for the map
-  function loadGoogleMaps() {
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.async = 1;
-    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initialize_map';
-    document.body.appendChild(script);
-  }
-
-  window.onload = loadGoogleMaps;
-
-</script>
-
-<!--
 <script src="js/zepto.min.js"></script>
 <script src="js/scripts.js"></script>
--->
 
 </body>
 </html>
