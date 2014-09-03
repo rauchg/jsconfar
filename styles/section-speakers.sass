@@ -17,11 +17,11 @@
 .speaker-list
   @extend ul.block-list
   padding: 2px 4px 0 12px
-  margin: 0 -20px
+  margin: 40px -20px
 
 .speaker
   display: block
-  width: $one-third
+  width: 50%
   float: left
   border: 2px solid $gray
   margin: -2px 0 0 -2px
@@ -47,22 +47,39 @@
     margin-left: 128px
     padding: 17px 20px 0 20px
 
+  .name
+    min-height: 85px
+
   h2
     font-size: 20px
     margin-bottom: 6px
     font-weight: bold
+    text-align: left
 
   p
     font-size: 20px
+    text-align: left
 
   .social
-    margin-top: 20px
+    padding-bottom: 10px
 
   a.facebook
     color: $facebookBlue
 
   a.twitter
     color: $twitterBlue
+
+
+  &.speaker-teaser
+    width: auto
+    float: none
+    clear: both
+    padding: 30px 20px
+    margin-right: 4px
+    background: $gray
+
+    h2
+      text-align: center
 
 
 
