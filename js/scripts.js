@@ -1,9 +1,12 @@
-$(document).ready(function(){
+document.addEventListener('DOMContentLoaded', function(){
 
   // Track when the users subscribe to the newsletter
-  $('form.signup-form').submit(function(event){
-    ga( 'send', 'event', 'newsletter', 'signup' );
-  });
+  var signupForms = document.querySelectorAll('form.signup-form');
+  for(var i in signupForms) {
+    signupForms[i].onsubmit = function(event){
+      ga( 'send', 'event', 'newsletter', 'signup' );
+    };
+  }
 
 });
 
