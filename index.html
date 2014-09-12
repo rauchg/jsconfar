@@ -91,7 +91,7 @@
 
     <div class="intro-holder">
 
-      <div class="container">
+      <div class="container" itemscope="itemscope" itemtype="http://schema.org/Event">
 
         <h1 class="sprite logo"><span class="screenreader">JSConf</span></h1>
 
@@ -106,6 +106,9 @@
           </span>
         </address>
 
+        <meta itemprop="url" content="http://www.jsconfar.com"/>
+        <meta itemprop="startDate" content="2014-11-29"/>
+        <meta itemprop="image" content="images/jsconf_argentina_logo.png"/>
 
         <div class="hello">Hello Bs As!</div>
 
@@ -234,11 +237,14 @@
       <div class="place-cell-data">
         <h1>The Venue</h1>
 
-        <address class="vcard">
-          <div class="adr">
-            <p><strong>Auditorio Bs As</strong></p>
+        <address class="vcard" itemprop="location">
+          <div class="adr" itemscope="itemscope" itemtype="http://schema.org/PostalAddress">
+            <p><strong itemprop="name">Auditorio Bs As</strong></p>
             <p>Buenos Aires Design</p>
-            <p class="street-address">Av. Pueyrredon 2501</p>
+            <p class="street-address" itemprop="streetAddress">Av. Pueyrredon 2501</p>
+            <meta itemprop="addressLocality" content="Ciudad de Buenos Aires, Argentina"/>
+            <meta itemprop="telephone" content=""/>
+            <meta itemprop="url" content="https://www.google.com.ar/maps/place/Av+Pueyrred%C3%B3n+2501,+Buenos+Aires,+Ciudad+Aut%C3%B3noma+de+Buenos+Aires/@-34.5855533,-58.3932661,17z/data=!3m1!4b1!4m2!3m1!1s0x95bccaa18fa55699:0x7746d21fe65b54d5"/>
           </div>
         </address>
       </div>
