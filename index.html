@@ -91,7 +91,7 @@
 
     <div class="intro-holder">
 
-      <div class="container">
+      <div class="container" itemscope="itemscope" itemtype="http://schema.org/Event">
 
         <h1 class="sprite logo"><span class="screenreader">JSConf</span></h1>
 
@@ -106,6 +106,9 @@
           </span>
         </address>
 
+        <meta itemprop="url" content="http://www.jsconfar.com"/>
+        <meta itemprop="startDate" content="2014-11-29"/>
+        <meta itemprop="image" content="images/jsconf_argentina_logo.png"/>
 
         <div class="hello">Hello Bs As!</div>
 
@@ -205,6 +208,57 @@
           </div>
         </li>
 
+        <li class="speaker">
+          <figure>
+            <div class="flag flag-usa"></div>
+            <img src="images/speakers/ricardo-cabello.jpg" alt=""/>
+          </figure>
+          <div class="description">
+            <div class="name">
+              <h2>Ricardo Cabello</h2>
+              <p>Three.JS</p>
+            </div>
+            <div class="social">
+              <a href="https://github.com/mrdoob" class="facebook" target="_blank">&lt;github&gt;</a>
+              <a href="https://twitter.com/mrdoob" class="twitter" target="_blank">&lt;tw&gt;</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="speaker">
+          <figure>
+            <div class="flag flag-usa"></div>
+            <img src="images/speakers/nicolas-garcia.jpg" alt=""/>
+          </figure>
+          <div class="description">
+            <div class="name">
+              <h2>Nicolás Belmonte</h2>
+              <p>Twitter</p>
+            </div>
+            <div class="social">
+              <a href="https://github.com/philogb" class="github" target="_blank">&lt;github&gt;</a>
+              <a href="https://twitter.com/philogb" class="twitter" target="_blank">&lt;tw&gt;</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="speaker">
+          <figure>
+            <div class="flag flag-usa"></div>
+            <img src="images/speakers/alvaro-videla.jpg" alt=""/>
+          </figure>
+          <div class="description">
+            <div class="name">
+              <h2>Álvaro Videla</h2>
+              <p>RabbitMQ</p>
+            </div>
+            <div class="social">
+              <a href="https://github.com/videlalvaro" class="facebook" target="_blank">&lt;github&gt;</a>
+              <a href="https://twitter.com/old_sound" class="twitter" target="_blank">&lt;tw&gt;</a>
+            </div>
+          </div>
+        </li>
+
         <li class="speaker speaker-teaser">
 
           <h2>More speakers will be announced soon!</h2>
@@ -234,11 +288,14 @@
       <div class="place-cell-data">
         <h1>The Venue</h1>
 
-        <address class="vcard">
-          <div class="adr">
-            <p><strong>Auditorio Bs As</strong></p>
+        <address class="vcard" itemprop="location">
+          <div class="adr" itemscope="itemscope" itemtype="http://schema.org/PostalAddress">
+            <p><strong itemprop="name">Auditorio Bs As</strong></p>
             <p>Buenos Aires Design</p>
-            <p class="street-address">Av. Pueyrredon 2501</p>
+            <p class="street-address" itemprop="streetAddress">Av. Pueyrredon 2501</p>
+            <meta itemprop="addressLocality" content="Ciudad de Buenos Aires, Argentina"/>
+            <meta itemprop="telephone" content=""/>
+            <meta itemprop="url" content="https://www.google.com.ar/maps/place/Av+Pueyrred%C3%B3n+2501,+Buenos+Aires,+Ciudad+Aut%C3%B3noma+de+Buenos+Aires/@-34.5855533,-58.3932661,17z/data=!3m1!4b1!4m2!3m1!1s0x95bccaa18fa55699:0x7746d21fe65b54d5"/>
           </div>
         </address>
       </div>

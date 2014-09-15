@@ -719,6 +719,7 @@ h1.logo {
   display: block;
   width: 50%;
   float: left;
+  min-height: 132px;
   border: 2px solid #bcc7cf;
   margin: -2px 0 0 -2px; }
   .speaker figure {
@@ -757,14 +758,12 @@ h1.logo {
   .speaker a.github {
     color: #212121; }
   .speaker.speaker-teaser {
-    width: auto;
-    float: none;
-    clear: both;
-    padding: 30px 20px;
+    padding: 37px 20px 0 20px;
     margin-right: 4px;
     background: #bcc7cf; }
     .speaker.speaker-teaser h2 {
-      text-align: center; }
+      text-align: center;
+      line-height: 140%; }
 
 .flag {
   width: 30px;
