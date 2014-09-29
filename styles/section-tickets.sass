@@ -3,22 +3,25 @@
   background: $white
   padding: 60px 0
 
-
   h1
     margin-bottom: 60px
 
   .buy-ticket
     width: 50%
     float: left
-    margin-left: -30px
+    margin: 0 40px 0 -40px
     padding-top: 10px
 
     .price
       font-size: 34px
-      margin-left: 112px
+      margin: 0 auto
+      text-align: center
+      padding: 0 255px 0 60px
+      width: 580px
 
   .ticket-includes
-    margin-left: 50%
+    width: 50%
+    float: left
     font-size: 18px
 
     h2
@@ -35,17 +38,9 @@
 
 .illustration-tickets
   position: relative
-  background: url(images/illustration-tickets.png) no-repeat 50% 0%
-  width: 480px
+  background: url(images/illustration-tickets.png) no-repeat -100px 0
+  width: 580px
   height: 214px
-
-  .icon-button-thingy
-    position: absolute
-    top: 0px
-    left: 73px
-    width: 21px
-    height: 23px
-    background-position: -0px -220px
 
   .button
     position: absolute
@@ -55,8 +50,18 @@
     border-radius: 3px
     font-size: 18px
     font-weight: bold
-    padding: 15px 40px
+    padding: 17px 40px 15px
     background: $yellow
+
+    &:before
+      content: ""
+      @extend .sprite
+      position: absolute
+      top: -17px
+      left: 12px
+      width: 21px
+      height: 23px
+      background-position: -0px -220px
 
     &:hover
       background: lighten($yellow, 10%)

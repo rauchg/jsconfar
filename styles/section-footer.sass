@@ -22,35 +22,21 @@
     margin: 45px 0 65px 0
 
 
+.footer-illustration-wrapper
+  position: relative
+  background: $blue
+
+.footer-dark-strip
+  background: #1e3e56
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 0
+  height: 166px
+  z-index: 10
+
 .footer-illustration
+  position: relative
   background: url(images/illustration-footer.png) no-repeat 50% 0%
-  background-color: $blue
   height: 386px
-
-.footer-author
-  background-color: $blue
-  padding: 40px 0 30px 0
-
-  p.author
-    position: relative
-    display: inline-block
-    margin: 0
-    font-size: 14px
-    font-weight: bold
-    color: #2F6992
-
-    a
-      color: #2F6992
-      text-decoration: none
-      border-bottom: 1px dotted #2F6992
-      transition: color 0.2s ease-out
-
-      &:hover
-        color: lighten(#2F6992, 10%)
-        border-color: lighten(#2F6992, 10%)
-
-    .icon-aerolab
-      position: absolute
-      top: -12px
-      right: -12px
-      pointer-events: none
+  z-index: 20

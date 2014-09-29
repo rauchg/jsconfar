@@ -391,6 +391,12 @@ input:focus, textarea:focus, select:focus, button:focus, a:focus {
   max-width: 1010px;
   padding: 0 30px;
   margin: 0 auto; }
+  .container:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
 
 html {
   overflow-y: scroll; }
@@ -448,7 +454,7 @@ a.button, button.button {
   color: #1e3d55;
   font-size: 18px;
   font-weight: bold;
-  padding: 30px 35px;
+  padding: 29px 35px 31px;
   text-align: center;
   -webkit-transition: background-color 200ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
   -moz-transition: background-color 200ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
@@ -479,19 +485,19 @@ a.button, button.button {
   text-align: center;
   padding: 0; }
 
-.sprite, .icon, .large-icon {
+.sprite, .icon, .large-icon, .illustration-tickets .button:before {
   background: url(images/sprite.png) no-repeat -1000px -1000px;
   background-size: 500px 250px;
   display: inline-block;
   overflow: hidden;
   vertical-align: top; }
-  .sprite.logo, .logo.icon, .logo.large-icon {
+  .sprite.logo, .logo.icon, .logo.large-icon, .illustration-tickets .logo.button:before {
     width: 207px;
     height: 100px;
     background-position: 0 0; }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .sprite, .icon, .large-icon {
+  .sprite, .icon, .large-icon, .illustration-tickets .button:before {
     background-image: url(images/sprite@2x.png); } }
 .icon {
   width: 20px;
@@ -512,10 +518,6 @@ a.button, button.button {
     width: 25px;
     height: 23px;
     background-position: -160px -110px; }
-  .icon.icon-aerolab {
-    width: 25px;
-    height: 17px;
-    background-position: -300px 0px; }
 
 .large-icon {
   width: 50px;
@@ -534,6 +536,14 @@ a.button, button.button {
   .large-icon.icon-party {
     background-position: -350px -150px; }
 
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .sprite, .icon, .large-icon, .illustration-tickets .button:before {
+    background-image: url(images/sprite@2x.png);
+    -webkit-background-size: 500px 250px;
+    -moz-background-size: 500px 250px;
+    -ms-background-size: 500px 250px;
+    -o-background-size: 500px 250px;
+    background-size: 500px 250px; } }
 .section-header {
   text-align: center; }
   .section-header .logo {
@@ -558,8 +568,9 @@ a.button, button.button {
     margin-bottom: 32px; }
 
 .intro-holder {
-  padding-top: 30px;
-  background: #ffc20d url(images/illustration-sky.png) no-repeat 50% 100%; }
+  padding-top: 24px;
+  background: #ffc20d url(images/illustration-sky.png) no-repeat 50% 100%;
+  position: relative; }
 
 h1.logo {
   display: block;
@@ -599,7 +610,7 @@ h1.logo {
     border-bottom-width: 2px;
     font-size: 18px;
     font-weight: bold;
-    line-height: 26px;
+    line-height: 27px;
     text-transform: uppercase;
     color: #d3a91e; }
     .countdown .counter strong {
@@ -607,7 +618,7 @@ h1.logo {
       color: #214760;
       height: 79px;
       font-size: 38px;
-      line-height: 82px;
+      line-height: 83px;
       overflow: hidden;
       border-bottom: 2px solid #d3a91e;
       margin-bottom: 2px; }
@@ -742,7 +753,7 @@ h1.logo {
   .speaker .name {
     min-height: 85px; }
   .speaker h2 {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 6px;
     font-weight: bold;
     text-align: left; }
@@ -758,7 +769,10 @@ h1.logo {
   .speaker a.github {
     color: #212121; }
   .speaker.speaker-teaser {
-    padding: 37px 20px 0 20px;
+    width: auto;
+    float: none;
+    clear: both;
+    padding: 47px 20px 0 20px;
     margin-right: 4px;
     background: #bcc7cf; }
     .speaker.speaker-teaser h2 {
@@ -1119,13 +1133,17 @@ h1.logo {
   .section-tickets .buy-ticket {
     width: 50%;
     float: left;
-    margin-left: -30px;
+    margin: 0 40px 0 -40px;
     padding-top: 10px; }
     .section-tickets .buy-ticket .price {
       font-size: 34px;
-      margin-left: 112px; }
+      margin: 0 auto;
+      text-align: center;
+      padding: 0 255px 0 60px;
+      width: 580px; }
   .section-tickets .ticket-includes {
-    margin-left: 50%;
+    width: 50%;
+    float: left;
     font-size: 18px; }
     .section-tickets .ticket-includes h2 {
       font-size: 18px;
@@ -1139,16 +1157,9 @@ h1.logo {
 
 .illustration-tickets {
   position: relative;
-  background: url(images/illustration-tickets.png) no-repeat 50% 0%;
-  width: 480px;
+  background: url(images/illustration-tickets.png) no-repeat -100px 0;
+  width: 580px;
   height: 214px; }
-  .illustration-tickets .icon-button-thingy {
-    position: absolute;
-    top: 0px;
-    left: 73px;
-    width: 21px;
-    height: 23px;
-    background-position: 0px -220px; }
   .illustration-tickets .button {
     position: absolute;
     top: 15px;
@@ -1157,8 +1168,16 @@ h1.logo {
     border-radius: 3px;
     font-size: 18px;
     font-weight: bold;
-    padding: 15px 40px;
+    padding: 17px 40px 15px;
     background: #ffca00; }
+    .illustration-tickets .button:before {
+      content: "";
+      position: absolute;
+      top: -17px;
+      left: 12px;
+      width: 21px;
+      height: 23px;
+      background-position: 0px -220px; }
     .illustration-tickets .button:hover {
       background: #ffd533; }
 
@@ -1184,18 +1203,22 @@ h1.logo {
     background-image: url(../images/hotel-2.jpg); }
   .housing .description {
     margin-left: 50%;
-    padding: 28px 30px;
+    padding: 26px 22px 24px 29px;
     background: rgba(255, 202, 0, 0.95); }
   .housing h2 {
     line-height: 140%;
     font-size: 18px;
     font-weight: bold;
-    color: #214760; }
+    color: #214760;
+    margin: 0 0 1px; }
   .housing p {
     line-height: 140%;
-    font-size: 18px; }
+    font-size: 18px;
+    text-align: left; }
     .housing p a {
       color: white; }
+  .housing .description-inner {
+    margin: 0 150px 0 0; }
   .housing .price-and-rating {
     float: right;
     min-width: 130px;
@@ -1212,6 +1235,8 @@ h1.logo {
         vertical-align: top; }
     .housing .price-and-rating .rating .icon {
       margin-right: 4px; }
+      .housing .price-and-rating .rating .icon:last-child {
+        margin: 0; }
 
 .section-social {
   background: #214760;
@@ -1225,7 +1250,8 @@ h1.logo {
     margin-bottom: 20px; }
   .section-sponsors p {
     font-size: 14px;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 20px; }
     .section-sponsors p a {
       text-decoration: underline;
       color: #1e3d55; }
@@ -1233,6 +1259,7 @@ h1.logo {
     margin-top: 30px; }
 
 .sponsor-list {
+  padding: 0;
   font-size: 0px;
   margin-bottom: 2px;
   text-align: center; }
@@ -1242,6 +1269,8 @@ h1.logo {
     width: 167px;
     height: 78px;
     background: #d1b03f; }
+    .sponsor-list .sponsor img {
+      width: 100%; }
   .sponsor-list.sponsors-platinum .sponsor {
     width: 289px;
     height: 160px; }
@@ -1271,46 +1300,345 @@ h1.logo {
   .section-footer code {
     margin: 45px 0 65px 0; }
 
+.footer-illustration-wrapper {
+  position: relative;
+  background: #214760; }
+
+.footer-dark-strip {
+  background: #1e3e56;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 166px;
+  z-index: 10; }
+
 .footer-illustration {
+  position: relative;
   background: url(images/illustration-footer.png) no-repeat 50% 0%;
-  background-color: #214760;
-  height: 386px; }
+  height: 386px;
+  z-index: 20; }
 
-.footer-author {
-  background-color: #214760;
-  padding: 40px 0 30px 0; }
-  .footer-author p.author {
-    position: relative;
-    display: inline-block;
-    margin: 0;
-    font-size: 14px;
-    font-weight: bold;
-    color: #2f6992; }
-    .footer-author p.author a {
-      color: #2f6992;
-      text-decoration: none;
-      border-bottom: 1px dotted #2f6992;
-      transition: color 0.2s ease-out; }
-      .footer-author p.author a:hover {
-        color: #3b85b9;
-        border-color: #3b85b9; }
-    .footer-author p.author .icon-aerolab {
-      position: absolute;
-      top: -12px;
-      right: -12px;
-      pointer-events: none; }
+body {
+  transition: all 0.5s ease; }
 
+.bodyPerspective {
+  -webkit-transform: perspective(1500px) rotateX(4deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: perspective(1500px) rotateX(4deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: perspective(1500px) rotateX(4deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: perspective(1500px) rotateX(4deg) rotateY(0deg) rotateZ(0deg);
+  transform: perspective(1500px) rotateX(4deg) rotateY(0deg) rotateZ(0deg);
+  margin-top: -246px; }
+
+.terminalsizeanimated {
+  -webkit-transition: width 0.5s, -webkit-transform 0.5s;
+  transition: width 0.5s, transform 0.5s; }
+
+.closedTerminal {
+  width: 2px; }
+
+.openedTerminal {
+  width: 300px; }
+
+#contTerminal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  z-index: 25;
+  overflow: visible; }
+  #contTerminal .terminalHandle {
+    width: 50px;
+    height: 40px;
+    background: #132838;
+    position: absolute;
+    top: 20px;
+    left: auto;
+    margin-left: -50px;
+    background-image: url(../images/backterminalhandle2.png);
+    background-size: 100px 40px;
+    background-position: 0 0;
+    background-repeat: no-repeat; }
+
+@media only screen and (max-width: 800px) {
+  #contTerminal {
+    display: none; } }
+#onlineTerminal {
+  color: white;
+  background: #132838;
+  height: 100%;
+  padding: 30px;
+  font-family: monospace;
+  font-size: 19px;
+  line-height: 20px;
+  white-space: pre-wrap;
+  outline: 0;
+  overflow: auto;
+  box-sizing: border-box; }
+  #onlineTerminal span {
+    color: #4681ae; }
+  #onlineTerminal span.response {
+    color: #66d9ef; }
+  #onlineTerminal strong, #onlineTerminal b {
+    font-weight: normal;
+    color: #f4ba11; }
+  #onlineTerminal a {
+    font-weight: normal;
+    color: #f4ba11;
+    text-decoration: underline; }
+    #onlineTerminal a span {
+      color: #f4ba11; }
+
+.planetarium {
+  position: absolute;
+  top: 9px;
+  left: 50%;
+  margin-left: -373px; }
+
+#planeatrium {
+  width: 138px;
+  cursor: pointer; }
+
+#color-lights, #lights polygon {
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+
+@-webkit-keyframes rotating_planetarium {
+  0% {
+    transform: translateX(0px); }
+
+  100% {
+    transform: translateX(-133px); } }
+@keyframes rotating_planetarium {
+  0% {
+    transform: translateX(0px); }
+
+  100% {
+    transform: translateX(-133px); } }
+#color-lights2 {
+  animation: lightsanimation1 6s 3s infinite linear;
+  -webkit-animation: lightsanimation1 6s 3s infinite linear; }
+
+#color-lights1 {
+  animation: lightsanimation1 6s infinite linear;
+  -webkit-animation: lightsanimation1 6s infinite linear; }
+
+#color-lights3 {
+  animation: lightsanimationinitial 6s linear;
+  -webkit-animation: lightsanimationinitial 6s linear; }
+
+#color-lights1, #color-lights2, #color-lights3 {
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused; }
+
+#planeatrium:hover #color-lights1, #planeatrium:hover #color-lights2, #planeatrium:hover #color-lights3 {
+  animation-play-state: running;
+  -webkit-animation-play-state: running; }
+
+@-webkit-keyframes lightsanimation1 {
+  0% {
+    visibility: visible;
+    transform: translateX(0px) translateZ(0); }
+
+  50% {
+    transform: translateX(-116px) translateZ(0);
+    opacity: 1;
+    visibility: visible; }
+
+  50.001% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(116px) translateZ(0); }
+
+  50.002% {
+    opacity: 1;
+    visibility: visible; }
+
+  100% {
+    transform: translateX(0px) translateZ(0); } }
+@-webkit-keyframes lightsanimationinitial {
+  0% {
+    visibility: visible;
+    transform: translateX(116px) translateZ(0); }
+
+  100% {
+    transform: translateX(-116px) translateZ(0); } }
+.rainbows {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  width: 49px;
+  left: 40px;
+  height: 0px;
+  top: 99px; }
+
+.planetarium.fly #planeatrium {
+  animation: flyplanetarium 6s linear 0s infinite;
+  -webkit-animation: flyplanetarium 6s linear 0s infinite; }
+.planetarium.fly .rainbows {
+  animation: flylights 6s linear 0s infinite;
+  -webkit-animation: flylights 6s linear 0s infinite; }
+.planetarium.fly #color-lights1, .planetarium.fly #color-lights2, .planetarium.fly #color-lights3 {
+  animation-play-state: running;
+  -webkit-animation-play-state: running; }
+
+.rainbows div {
+  width: 47px;
+  height: 18px;
+  position: relative;
+  background: -webkit-linear-gradient(left, #d91a12 15%, #e13300 15%, #ff7f14 16%, #f2ab03 32%, #ebc000 32%, #fade00 33%, #efff03 48%, #56fc02 49%, #52ff01 66%, #4ade7e 67%, #3baaf2 67%, #3baaf2 84%, #7337f7 84%, #6b40f2 100%);
+  animation: rainbow1 0.3s linear 0s infinite;
+  -webkit-animation: rainbow1 0.3s linear 0s infinite; }
+
+.rainbows div:nth-child(odd) {
+  left: 2px;
+  animation: rainbow2 0.3s linear 0s infinite;
+  -webkit-animation: rainbow2 0.3s linear 0s infinite; }
+
+@-webkit-keyframes flyplanetarium {
+  0% {
+    transform: translateY(0px); }
+
+  90% {
+    opacity: 1; }
+
+  100% {
+    transform: translateY(-800px);
+    opacity: 0; } }
+@-webkit-keyframes flylights {
+  0% {
+    transform: translateY(0px);
+    height: 0px; }
+
+  90% {
+    opacity: 1; }
+
+  100% {
+    transform: translateY(-800px);
+    height: 800px;
+    opacity: 0; } }
+@-webkit-keyframes rainbow1 {
+  0% {
+    left: 0; }
+
+  49.99% {
+    left: 0; }
+
+  50% {
+    left: 2px; }
+
+  99.99% {
+    left: 2px; }
+
+  100% {
+    left: 0; } }
+@-webkit-keyframes rainbow2 {
+  0% {
+    left: 2px; }
+
+  49.99% {
+    left: 2px; }
+
+  50% {
+    left: 0; }
+
+  99.99% {
+    left: 0; }
+
+  100% {
+    left: 2px; } }
+.cloudx1, .cloudx2, .cloudx3, .cloudx4, .cloudx5 {
+  width: 100%;
+  height: 100%; }
+
+#cloudx1, #cloudx2, #cloudx3, #cloudx4, #cloudx5 {
+  width: 138px;
+  position: absolute; }
+
+#cloudx2, #cloudx4 {
+  width: 108px; }
+
+#cloudx3 {
+  width: 64px; }
+
+#cloudx1 {
+  top: 5%;
+  -webkit-animation: fly 45s linear infinite;
+  animation: fly 45s linear infinite; }
+
+#cloudx2 {
+  left: 200px;
+  top: 20%;
+  opacity: 0.6;
+  -webkit-animation: fly 75s linear infinite;
+  animation: fly 75s linear infinite; }
+
+#cloudx3 {
+  left: -250px;
+  top: 35%;
+  opacity: 0.8;
+  -webkit-animation: fly 60s linear infinite;
+  animation: fly 60s linear infinite; }
+
+#cloudx4 {
+  left: 470px;
+  top: 50%;
+  opacity: 0.75;
+  -webkit-animation: fly 50s linear infinite;
+  animation: fly 50s linear infinite; }
+
+#cloudx5 {
+  left: -150px;
+  top: 65%;
+  opacity: 0.8;
+  -webkit-animation: fly 60s linear infinite;
+  animation: fly 60s linear infinite; }
+
+@keyframes fly {
+  0% {
+    margin-left: 50%; }
+
+  100% {
+    margin-left: -50%; } }
+@-webkit-keyframes fly {
+  0% {
+    margin-left: 50%; }
+
+  100% {
+    margin-left: -50%; } }
 @media only screen and (max-width: 980px) {
   .global-stats {
     max-width: none; }
     .global-stats .stat:first-child .stat-number {
       border-left: 0; }
     .global-stats .stat:last-child .stat-number {
-      border-right: 0; } }
+      border-right: 0; }
+
+  .section-tickets .buy-ticket {
+    width: 100%;
+    margin: 0; }
+    .section-tickets .buy-ticket .price {
+      padding: 0;
+      width: 100%; }
+  .section-tickets .ticket-includes {
+    width: 100%;
+    text-align: center;
+    margin: 40px 0 0; }
+    .section-tickets .ticket-includes ul {
+      list-style: none;
+      padding: 0; }
+
+  .illustration-tickets {
+    width: 100%;
+    background-position: 50% 0; }
+    .illustration-tickets .button {
+      left: 50%;
+      margin: 0 0 0 -130px; } }
 @media only screen and (max-width: 960px) {
   .speaker-list {
-    padding: 2px 6px 0 12px;
-    margin: 30px auto; }
+    padding: 2px 6px 0 12px; }
 
   .speaker {
     width: 50%; }
@@ -1328,12 +1656,34 @@ h1.logo {
       height: 200px; }
     .place-grid .place-cell-photo {
       display: none; } }
-@media only screen and (max-width: 960px) {
-  .speaker p {
-    font-size: 16px; } }
+@media only screen and (max-width: 940px) {
+  .housing .description {
+    padding: 22px 24px; }
+  .housing h2 {
+    font-size: 17px; }
+  .housing p {
+    font-size: 16px; }
+  .housing .description-inner {
+    margin: 0 136px 0 0; }
+  .housing .price-and-rating {
+    min-width: 116px; }
+    .housing .price-and-rating .price {
+      font-size: 40px; }
+      .housing .price-and-rating .price sup {
+        padding-top: 6px;
+        font-size: 15px;
+        line-height: 15px; } }
+@media only screen and (min-width: 800px) and (max-width: 960px) {
+  .speaker-list {
+    max-width: 720px;
+    margin: 0 auto; } }
+@media only screen and (max-width: 840px) {
+  .housing .description {
+    margin-left: 36%; } }
 @media only screen and (max-width: 820px) {
   .main-menu {
-    max-width: 402px; }
+    max-width: 402px;
+    padding: 79px 0 37px; }
     .main-menu .tickets,
     .main-menu .video {
       width: 50%;
@@ -1355,25 +1705,86 @@ h1.logo {
       width: 35px;
       height: 175px;
       top: -50px;
-      margin-left: -17.5px; } }
+      margin-left: -17.5px; }
+
+  .footer-illustration {
+    background-image: url(images/illustration-footer-mobile.png);
+    height: 286px; }
+
+  .footer-dark-strip {
+    height: 122px; } }
+@media only screen and (max-width: 710px) {
+  .housing .description {
+    margin-left: 0; }
+  .housing h2 {
+    font-size: 17px; }
+  .housing p {
+    font-size: 16px; }
+  .housing .description-inner {
+    margin: 0 136px 0 0; }
+  .housing .price-and-rating {
+    min-width: 116px; }
+    .housing .price-and-rating .price {
+      font-size: 40px; }
+      .housing .price-and-rating .price sup {
+        padding-top: 6px;
+        font-size: 15px;
+        line-height: 15px; } }
 @media only screen and (max-width: 670px) {
   .speaker-list {
-    margin: 30px auto;
+    margin: 0 auto;
     max-width: 360px;
     padding: 2px 0 0; }
 
-  .speaker, .speaker.speaker-teaser {
+  .speaker {
     width: 100%;
-    margin: -2px 0 0; } }
+    margin: -2px 0 0; }
+
+  .section-tickets .ticket-includes {
+    font-size: 16px; }
+
+  .illustration-tickets {
+    margin: 0 -30px;
+    width: auto; } }
 @media only screen and (max-width: 599px) {
   .global-stats {
     display: none; } }
 @media only screen and (max-width: 540px) {
   .container {
-    padding: 0 10px; } }
+    padding: 0 10px; }
+
+  .housing-list {
+    margin: 35px -10px 0; } }
 @media only screen and (max-width: 500px) {
   .intro-holder {
     background: #ffc81c; } }
+@media only screen and (max-width: 480px) {
+  .housing .description {
+    padding: 15px 20px 42px;
+    position: relative; }
+  .housing .description-inner {
+    margin: 0; }
+  .housing .price-and-rating {
+    float: none;
+    overflow: hidden;
+    margin: 0;
+    position: absolute;
+    bottom: 11px;
+    left: 20px;
+    right: 20px; }
+    .housing .price-and-rating .price {
+      float: left;
+      width: 50%;
+      font-size: 26px; }
+    .housing .price-and-rating .rating {
+      float: left;
+      width: 50%;
+      vertical-align: top;
+      padding: 1px 0 0;
+      text-align: right; } }
+@media only screen and (max-width: 440px) {
+  .section-tickets .ticket-includes {
+    font-size: 14px; } }
 @media only screen and (max-width: 480px) {
   .section-header time,
   .section-header .adr {
@@ -1390,15 +1801,11 @@ h1.logo {
       border-right-width: 0; }
 
   .speaker-list {
-    margin: 30px -10px;
+    margin: 0 -10px;
     max-width: none; }
 
   .speaker {
     border-width: 2px 0; }
-    .speaker h2 {
-      font-size: 18px; }
-    .speaker p {
-      font-size: 14px; }
 
   .countdown .counter:first-child {
     border-left-width: 0; }
@@ -1412,18 +1819,20 @@ h1.logo {
   .section-header code {
     font-size: 11px; } }
 @media only screen and (max-width: 370px) {
-  .main-menu .tickets,
-  .main-menu .video {
-    width: 100%;
-    border-width: 2px 0 0; }
-  .main-menu .tickets {
-    top: 0;
-    left: 0;
-    right: 0; }
-  .main-menu .video {
-    top: 79px;
-    right: 0;
-    left: 0; }
+  .main-menu {
+    padding: 158px 0 37px; }
+    .main-menu .tickets,
+    .main-menu .video {
+      width: 100%;
+      border-width: 2px 0 0; }
+    .main-menu .tickets {
+      top: 0;
+      left: 0;
+      right: 0; }
+    .main-menu .video {
+      top: 79px;
+      right: 0;
+      left: 0; }
 
   .countdown .counter {
     font-size: 15px;
@@ -1432,24 +1841,85 @@ h1.logo {
       height: 70px;
       font-size: 30px;
       line-height: 75px; } }
+@media only screen and (max-width: 360px) {
+  .housing h2 {
+    font-size: 16px; }
+  .housing p {
+    font-size: 14px; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .intro-holder {
+    background-image: url(images/illustration-sky@2x.png);
+    -webkit-background-size: 1400px 380px;
+    -moz-background-size: 1400px 380px;
+    -ms-background-size: 1400px 380px;
+    -o-background-size: 1400px 380px;
+    background-size: 1400px 380px; }
+
   .illustration {
     background-image: url(images/illustration@2x.png);
+    -webkit-background-size: 1300px 602px;
+    -moz-background-size: 1300px 602px;
+    -ms-background-size: 1300px 602px;
+    -o-background-size: 1300px 602px;
     background-size: 1300px 602px; }
     .illustration .obelisk {
       background-image: url(images/obelisk@2x.png);
+      -webkit-background-size: 43px 215px;
+      -moz-background-size: 43px 215px;
+      -ms-background-size: 43px 215px;
+      -o-background-size: 43px 215px;
       background-size: 43px 215px; }
 
   .flag {
     background-image: url(images/flags@2x.png);
-    background-size: 300px 30px; } }
+    -webkit-background-size: 300px 30px;
+    -moz-background-size: 300px 30px;
+    -ms-background-size: 300px 30px;
+    -o-background-size: 300px 30px;
+    background-size: 300px 30px; }
+
+  .illustration-tickets {
+    background-image: url(images/illustration-tickets@2x.png);
+    -webkit-background-size: 580px 214px;
+    -moz-background-size: 580px 214px;
+    -ms-background-size: 580px 214px;
+    -o-background-size: 580px 214px;
+    background-size: 580px 214px; }
+
+  .footer-illustration {
+    background-image: url(images/illustration-footer@2x.png);
+    -webkit-background-size: 1712px 386px;
+    -moz-background-size: 1712px 386px;
+    -ms-background-size: 1712px 386px;
+    -o-background-size: 1712px 386px;
+    background-size: 1712px 386px; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 780px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 780px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 780px), only screen and (min-device-pixel-ratio: 2) and (max-width: 780px), only screen and (min-resolution: 192dpi) and (max-width: 780px), only screen and (min-resolution: 2dppx) and (max-width: 780px) {
   .illustration {
     background-image: url(images/illustration-mobile@2x.png);
+    -webkit-background-size: 1300px 190px;
+    -moz-background-size: 1300px 190px;
+    -ms-background-size: 1300px 190px;
+    -o-background-size: 1300px 190px;
     background-size: 1300px 190px; }
     .illustration .obelisk {
       background-image: url(images/obelisk-mobile@2x.png);
-      background-size: 35px 175px; } }
+      -webkit-background-size: 35px 175px;
+      -moz-background-size: 35px 175px;
+      -ms-background-size: 35px 175px;
+      -o-background-size: 35px 175px;
+      background-size: 35px 175px; }
+
+  .footer-illustration {
+    background-image: url(images/illustration-footer-mobile@2x.png);
+    -webkit-background-size: 1712px 386px;
+    -moz-background-size: 1712px 386px;
+    -ms-background-size: 1712px 386px;
+    -o-background-size: 1712px 386px;
+    background-size: 1712px 386px; } }
+main {
+  width: 100%;
+  overflow: hidden; }
+
 .site-overlay {
   width: 1212px;
   height: 6234px;
@@ -1463,5 +1933,15 @@ h1.logo {
   opacity: 0.5;
   display: none; }
 
-::-webkit-scrollbar {
-  display: none; }
+html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+body {
+  width: calc(100% + 17px);
+  height: 100%;
+  overflow: auto; }
+
+/*# sourceMappingURL=styles.css.map */

@@ -29,6 +29,13 @@ input, textarea, select, button, a
   padding: 0 30px
   margin: 0 auto
 
+  &:after
+    content: '\0020'
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
+
 $one-third: 33.33333333%
 $two-thirds: 66.66666667%
 
@@ -107,7 +114,7 @@ a.button, button.button
   color: $text
   font-size: 18px
   font-weight: bold
-  padding: 30px 35px
+  padding: 29px 35px 31px
   text-align: center
 
   @include transition(background-color, $timing, $easing)

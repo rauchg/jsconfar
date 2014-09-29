@@ -9,10 +9,35 @@
       &:last-child .stat-number
         border-right: 0
 
+  .section-tickets
+    .buy-ticket
+      width: 100%
+      margin: 0
+
+      .price
+        padding: 0
+        width: 100%
+
+    .ticket-includes
+      width: 100%
+      text-align: center
+      margin: 40px 0 0
+
+      ul
+        list-style: none
+        padding: 0
+
+  .illustration-tickets
+    width: 100%
+    background-position: 50% 0
+
+    .button
+      left: 50%
+      margin: 0 0 0 -130px
+
 @media only screen and (max-width: 960px)
   .speaker-list
     padding: 2px 6px 0 12px
-    margin: 30px auto
 
   .speaker
     width: 50%
@@ -35,17 +60,46 @@
     .place-cell-photo
       display: none
 
+@media only screen and (max-width: 940px)
+  .housing
+    .description
+      padding: 22px 24px
 
-@media only screen and (max-width: 960px)
-  .speaker
+    h2
+      font-size: 17px
+
     p
       font-size: 16px
 
+    .description-inner
+      margin: 0 136px 0 0
+
+    .price-and-rating
+      min-width: 116px
+
+      .price
+        font-size: 40px
+
+        sup
+          padding-top: 6px
+          font-size: 15px
+          line-height: 15px
+
+
+@media only screen and (min-width: 800px) and (max-width: 960px)
+  .speaker-list
+    max-width: 720px
+    margin: 0 auto
+
+@media only screen and (max-width: 840px)
+  .housing
+    .description
+      margin-left: 36%
 
 @media only screen and (max-width: 820px)
   .main-menu
     max-width: 402px
-    //padding: 79px 0 37px
+    padding: 79px 0 37px
 
     .tickets,
     .video
@@ -74,15 +128,55 @@
       top: -50px
       margin-left: -17.5px
 
+  .footer-illustration
+    background-image: url(images/illustration-footer-mobile.png)
+    height: 286px
+
+  .footer-dark-strip
+    height: 122px
+
+@media only screen and (max-width: 710px)
+  .housing
+    .description
+      margin-left: 0
+
+    h2
+      font-size: 17px
+
+    p
+      font-size: 16px
+
+    .description-inner
+      margin: 0 136px 0 0
+
+    .price-and-rating
+      min-width: 116px
+
+      .price
+        font-size: 40px
+
+        sup
+          padding-top: 6px
+          font-size: 15px
+          line-height: 15px
+
 @media only screen and (max-width: 670px)
   .speaker-list
-    margin: 30px auto
+    margin: 0 auto
     max-width: 360px
     padding: 2px 0 0
 
-  .speaker, .speaker.speaker-teaser
+  .speaker
     width: 100%
     margin: -2px 0 0
+
+  .section-tickets
+    .ticket-includes
+      font-size: 16px
+
+  .illustration-tickets
+    margin: 0 -30px
+    width: auto
 
 @media only screen and (max-width: 599px)
   .global-stats
@@ -92,9 +186,48 @@
   .container
     padding: 0 10px
 
+  .housing-list
+    margin: 35px -10px 0
+
 @media only screen and (max-width: 500px)
   .intro-holder
     background: #ffc81c
+
+@media only screen and (max-width: 480px)
+  .housing
+    .description
+      padding: 15px 20px 42px
+      position: relative
+
+    .description-inner
+      margin: 0
+
+    .price-and-rating
+      float: none
+      overflow: hidden
+      margin: 0
+      position: absolute
+      bottom: 11px
+      left: 20px
+      right: 20px
+
+      .price
+        float: left
+        width: 50%
+        font-size: 26px
+
+      .rating
+        float: left
+        width: 50%
+        vertical-align: top
+        padding: 1px 0 0
+        text-align: right
+
+
+@media only screen and (max-width: 440px)
+  .section-tickets
+    .ticket-includes
+      font-size: 14px
 
 @media only screen and (max-width: 480px)
   .section-header
@@ -117,15 +250,11 @@
       border-right-width: 0
 
   .speaker-list
-    margin: 30px -10px
+    margin: 0 -10px
     max-width: none
 
   .speaker
     border-width: 2px 0
-    h2
-      font-size: 18px
-    p
-      font-size: 14px
 
   .countdown
     .counter
@@ -147,7 +276,7 @@
 
 @media only screen and (max-width: 370px)
   .main-menu
-    //padding: 158px 0 37px
+    padding: 158px 0 37px
 
     .tickets, 
     .video
@@ -174,34 +303,62 @@
         font-size: 30px
         line-height: 75px
 
+@media only screen and (max-width: 360px)
+  .housing
+    h2
+      font-size: 16px
+
+    p
+      font-size: 14px
+
 
 // Retina
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)
+  .intro-holder
+    background-image: url(images/illustration-sky@2x.png)
+
+    @include background-size(1400px 380px)
+
   .illustration
     background-image: url(images/illustration@2x.png)
 
-    background-size: 1300px 602px
+    @include background-size(1300px 602px)
 
     .obelisk
       background-image: url(images/obelisk@2x.png)
 
-      background-size: 43px 215px
+      @include background-size(43px 215px)
 
   .flag
     background-image: url(images/flags@2x.png)
 
-    background-size: 300px 30px
+    @include background-size(300px 30px)
 
-// Retina 780px para abajo
+  .illustration-tickets
+    background-image: url(images/illustration-tickets@2x.png)
+
+    @include background-size(580px 214px)
+
+  .footer-illustration
+    background-image: url(images/illustration-footer@2x.png)
+    
+    @include background-size(1712px 386px)
+
+// Retina header 780px para abajo
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 780px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 780px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 780px), only screen and (min-device-pixel-ratio: 2) and (max-width: 780px), only screen and (min-resolution: 192dpi) and (max-width: 780px), only screen and (min-resolution: 2dppx) and (max-width: 780px)
   .illustration
     background-image: url(images/illustration-mobile@2x.png)
 
-    background-size: 1300px 190px
+    @include background-size(1300px 190px)
 
     .obelisk
       background-image: url(images/obelisk-mobile@2x.png)
 
-      background-size: 35px 175px
+      @include background-size(35px 175px)
+
+  .footer-illustration
+    background-image: url(images/illustration-footer-mobile@2x.png)
+    
+    @include background-size(1712px 386px)
