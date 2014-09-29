@@ -4,6 +4,8 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import url(../js/jquery-ui.min.css);
+@import url(animate.css);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -1655,7 +1657,7 @@ body {
 
 #cloudx5 {
   left: -150px;
-  top: 65%;
+  top: 70%;
   opacity: 0.8;
   -webkit-animation: fly 60s linear infinite;
   animation: fly 60s linear infinite; }
