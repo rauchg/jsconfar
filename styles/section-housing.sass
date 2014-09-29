@@ -27,7 +27,7 @@
 
   .description
     margin-left: 50%
-    padding: 28px 30px
+    padding: 26px 22px 24px 29px
     background: transparentize($yellow, 0.05)
 
   h2
@@ -35,13 +35,18 @@
     font-size: 18px
     font-weight: bold
     color: $blue
+    margin: 0 0 1px
 
   p
     line-height: 140%
     font-size: 18px
+    text-align: left
 
     a
       color: $white
+
+  .description-inner
+    margin: 0 150px 0 0
 
   .price-and-rating
     float: right
@@ -64,3 +69,6 @@
 
       .icon
         margin-right: 4px
+
+        &:last-child
+          margin: 0

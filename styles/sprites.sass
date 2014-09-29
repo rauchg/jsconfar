@@ -38,10 +38,6 @@
     width: 25px
     height: 23px
     background-position: -160px -110px
-  &.icon-aerolab
-    width: 25px
-    height: 17px
-    background-position: -300px -0px
 
 
 .large-icon
@@ -67,3 +63,9 @@
 
   &.icon-party
     background-position: -350px -150px
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)
+  .sprite
+    background-image: url(images/sprite@2x.png)
+
+    @include background-size(500px 250px)

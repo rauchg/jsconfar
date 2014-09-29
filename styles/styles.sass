@@ -1,11 +1,20 @@
 @charset "UTF-8"
 
+@mixin background-size($all)
+  -webkit-background-size: $all
+  -moz-background-size: $all
+  -ms-background-size: $all
+  -o-background-size: $all
+  background-size: $all
+
 @import "colors.sass"
 @import "normalize.scss"
 @import "fonts.scss"
 
 @import "basics.sass"
 @import "sprites.sass"
+
+@import "scrollbars.sass"
 
 @import "section-header.sass"
 @import "section-speakers.sass"
@@ -16,10 +25,23 @@
 @import "section-social.sass"
 @import "section-sponsors.sass"
 @import "section-footer.sass"
+@import "terminal.sass"
+
+
+@import "planetarium"
+@import "animations"
 
 @import "media.sass"
 
+@import "../js/jquery-ui.min.css"
+
+@import "animate.css"
+
 // temporal
+
+main
+  width: 100%
+  overflow: hidden
 
 .site-overlay
   width: 1212px
@@ -34,5 +56,4 @@
   opacity: 0.5
   display: none
 
-::-webkit-scrollbar
-  display: none
+

@@ -1,0 +1,55 @@
+/* Stuff for Windoge */
+
+* {
+  display: none;
+}
+
+html, body {
+  display: block !important;
+}
+
+#bsod {
+  display: block !important;
+  visibility: visible !important;
+  background: #0301AD !important;
+  position: absolute !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 9999 !important;
+  font-weight: bold !important;
+  padding-top: 200px !important;
+}
+  #bsod * {
+    display: block;
+  }
+  #bsod .bsod-holder {
+    display: block;
+    width: 800px;
+    margin: 0px auto;
+    text-ali
+  }
+  #bsod font {
+    display: block !important;
+    font-weight: bold !important;
+    width: auto;
+    line-height: 200%;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  #bsod u {
+    display: inline-block;
+    background: #ABAEB7;
+    color: #ffffff;
+    padding: 0px 8px;
+    text-decoration: none;
+  }
+  #bsod a {
+    display: inline-block;
+    background: #ffffff;
+    padding: 0px 8px;
+    color: #0301AD;
+    cursor: pointer !important;
+  }

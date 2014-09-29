@@ -1,0 +1,269 @@
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    *zoom: 1;
+}
+
+@mixin grid($cols: 1, $gutter: 0, $childs: ".item") { 
+    @include clearfix;
+    width: auto;
+    margin-right: -$gutter;
+ 
+    #{$childs} {
+        float: left;
+        width: (100% / $cols);
+ 
+        padding-right: $gutter;
+        background-clip: content-box;
+    }
+}
+
+@mixin row-list($padding: 1em, $childs: "li") {
+    list-style: none;
+    margin: 0; padding: 0;
+
+    #{$childs} {
+        display: inline-block;
+        vertical-align: top;
+
+        & + #{$childs} {
+            margin-left: $padding;
+        }
+    }
+}
+
+@mixin breakpoint($point, $value: 0) {
+    @if $point == "mobile" {
+        @media (min-width: 320px) { @content; }
+    }
+
+    @else if $point == "mobile-landscape" {
+        @media (min-width: 767px) { @content; }
+    }
+
+    @else if $point == "tablet" {
+        @media (min-width: 768px) { @content; }
+    }
+
+    @else if $point == "tablet-landscape" {
+        @media (min-width: 979px) { @content; }
+    }
+
+    @else if $point == "retina-only" {
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)  { @content; }
+    }
+
+    @else {
+        @media ($point: $value) { @content; }
+    }
+}
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content; 
+    }
+
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+
+    @-o-keyframes #{$name} {
+        @content;
+    }
+
+    @keyframes #{$name} {
+        @content;
+    } 
+}
+
+@mixin between-breakpoints($min, $max) {
+    @media (min-width: $min) and (max-width: $max) {
+        @content;
+    }
+}
+
+@mixin responsive-css-includes {
+    .from-mobile-landscape-on,
+    .from-tablet-on,
+    .from-tablet-landscape-on,
+    .from-desktop-on,
+    .from-desktop-large-on {
+        display: none;
+    }
+
+    @include breakpoint("mobile-landscape") {
+        .from-mobile-landscape-on {
+            display: inherit;
+        }
+    }
+
+    @include breakpoint("tablet") {
+        .mobile-only {
+            display: none;
+        }
+
+        .from-tablet-on {
+            display: inherit;
+        }
+    }
+
+    @include breakpoint("tablet-landscape") {
+        .from-tablet-landscape-on {
+            display: inherit;
+        }
+    }
+
+    @include breakpoint("desktop") {
+        .from-desktop-on {
+            display: inherit;
+        }
+    }
+    
+    @include breakpoint("desktop-large") {
+        .from-desktop-large-on {
+            display: inherit;
+        }
+    }
+}
+
+@mixin css-triangle($orientation, $base: 60px, $height: 30px, $color: #fff) {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    background: transparent;
+
+    @if $orientation == "top" {
+        border-width: 0 ($base / 2) $height ($base / 2);
+        border-color: transparent transparent $color transparent;
+    }
+    @if $orientation == "bottom" {
+        border-width: $height ($base / 2) 0 ($base / 2);
+        border-color: $color transparent transparent transparent;
+    }
+    @if $orientation == "left" {
+        border-width: ($base / 2) $height ($base / 2) 0;
+        border-color: transparent $color transparent transparent;
+    }
+    @if $orientation == "right" {
+        border-width: ($base / 2) 0 ($base / 2) $height;
+        border-color: transparent transparent transparent $color;
+    }
+}
+
+@mixin bg-cover($url: false) {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+
+    @if($url) {
+        background-image: url(#{$url});
+        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"#{$url}"', sizingMethod='scale')";
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"#{$url}"', sizingMethod='scale');
+    }
+}
+
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    background-clip: padding-box;
+}
+
+@mixin border-radius-support($radius) {
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+    background-clip: padding-box;
+}
+
+@mixin text-rendering($style) {
+    @if $style == "smooth" {
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+    } else {
+        -webkit-font-smoothing: subpixel-antialiased;
+        font-smoothing: subpixel-antialiased;
+    }
+}
+
+@mixin inline-block() {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+@mixin translate-z-hack() {
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+}
+
+@mixin reset-transforms() {
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+
+@mixin translate-3d-hack() {
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+}
+
+@mixin animation($arguments...) {
+    -webkit-animation: $arguments;
+    -moz-animation: $arguments;
+    -o-animation: $arguments;
+    animation: $arguments;
+}
+
+@mixin transition($arguments...) {
+    -webkit-transition: $arguments;
+    -moz-transition: $arguments;
+    -o-transition: $arguments;
+    transition: $arguments;
+}
+
+@mixin transform($arguments...) {
+    -webkit-transform: $arguments;  
+    -moz-transform: $arguments;  
+    -ms-transform: $arguments;  
+    -o-transform: $arguments;  
+    transform: $arguments; 
+}
+
+@mixin box-shadow($arguments...) {
+    -webkit-box-shadow: $arguments;
+    box-shadow: $arguments;
+}
+
+@mixin disable-selection() {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
