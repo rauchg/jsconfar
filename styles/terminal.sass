@@ -26,6 +26,8 @@ body
 	height: 100%
 	z-index: 25
 	overflow: visible
+	background: #132838
+	@include scrollable() 
 
 	.terminalHandle
 		width: 50px
@@ -49,6 +51,7 @@ body
 	background: #132838
 	height: 100%
 	padding: 30px
+	margin-right: 10px
 	font-family: monospace
 	font-size: 19px
 	line-height: 20px
@@ -56,6 +59,7 @@ body
 	outline: 0
 	overflow: auto
 	box-sizing: border-box
+	@include scrollable()
 
 	span
 		color: #4681AE

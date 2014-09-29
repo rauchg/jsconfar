@@ -3,6 +3,8 @@
 	if (_is_mobile) {
 		$('#contTerminal').remove();
 	} else {
+		//$('#contTerminal').css('position', 'absolute').css('minHeight', $(document).height()+'px');
+	
 		//From: http://stackoverflow.com/questions/237104/array-containsobj-in-javascript
 		Array.prototype.contains = function(obj) { var i = this.length; while (i--) { if (this[i] === obj) { return true; } } return false; }
 
