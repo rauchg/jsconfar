@@ -352,9 +352,25 @@
 			setTimeout(function(){ $("#onlineTerminal .response:last").append(' totales') }, 2000);
 		}
 		function scrollTo(part) {
-			$('html, body').animate({
-				scrollTop: $(part).offset().top
-			}, 2000);
+			// This function can take two types of arguments: a number (offset) or a selector
+			if( typeof part === 'number' ) {
+				$('html, body').animate({
+					scrollTop: part
+				}, 1500);
+			} else if( typeof part === 'string' ) {
+				var $section = $(part);
+				if( $section.length == 0 ) { $section = $('.section-'+part); }
+
+				if( $section.length > 0 ) {
+					$('html, body').animate({
+						scrollTop: $section.offset().top
+					}, 1500);
+				} else {
+					$("#onlineTerminal").html($("#onlineTerminal").html().trim()+'<span class="response">We couldn\'t find that. Try something like \'footer\', \'speakers\' or any CSS selector.</span>'+breakLine()+breakLine());
+				}
+			} else {
+				$("#onlineTerminal").html($("#onlineTerminal").html().trim()+'<span class="response">You can only use a</span>'+breakLine()+breakLine());
+			}
 		}
 		function comicSans() {
 			$('*').css({"font-family": '"Comic Sans MS", cursive, sans-serif'})
