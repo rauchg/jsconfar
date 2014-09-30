@@ -81,8 +81,15 @@ ul.block-list
   margin: 0
   padding: 0
   list-style: none
-  // Todo: Use an actual clearfix
-  overflow: hidden
+
+  // Clearfix
+  &:before, &:after
+    content: "."
+    display: block
+    height: 0
+    overflow: hidden
+  &:after
+    clear: both
 
 
 .screenreader
