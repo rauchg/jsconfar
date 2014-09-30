@@ -104,6 +104,8 @@ $(document).ready(function(){
       $(".planetarium").removeClass("fly");
       $("#nyancataudio").animate({volume: 0}, 500);
     }, 6000);
+
+    ga( 'send', 'event', 'toys', 'planetarium');
   });
   $("#nyancataudio").trigger("pause");
   $("#nyancataudio").prop('volume', 0);
