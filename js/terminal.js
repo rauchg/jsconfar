@@ -278,6 +278,7 @@
 			if ((e.which == 65) && (kc_count == 9)) { kc_count++; }
 			if (kc_count == 10) {
 				$('main').append($('<img src="images/miley1.png" onload="$(this).animate({ left: $(window).width()+150 }, 2000, function() { $(this).remove(); })" style="position:absolute;left:-150px;top:'+($(window).scrollTop()+100)+'px;"/>'));
+				ga( 'send', 'event', 'toys', 'terminal', 'upupdowndownleftrightleftrightba');
 			};
 			if (resetkc) kc_count = 0;
 		});
