@@ -766,7 +766,7 @@ h1.logo {
     font-weight: bold;
     text-align: left; }
   .speaker p {
-    font-size: 18px;
+    font-size: 17px;
     text-align: left; }
   .speaker .social {
     padding-bottom: 10px; }
@@ -777,12 +777,13 @@ h1.logo {
   .speaker a.github {
     color: #212121; }
   .speaker.speaker-teaser {
-    width: auto;
-    float: none;
-    clear: both;
     padding: 47px 20px 0 20px;
-    margin-right: 4px;
     background: #bcc7cf; }
+    .speaker.speaker-teaser.full-width {
+      margin-right: 4px;
+      width: auto;
+      float: none;
+      clear: both; }
     .speaker.speaker-teaser h2 {
       text-align: center;
       line-height: 140%; }
@@ -4922,5 +4923,3 @@ main {
   z-index: 99999;
   opacity: 0.5;
   display: none; }
-
-/*# sourceMappingURL=styles.css.map */
