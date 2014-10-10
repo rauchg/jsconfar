@@ -1278,9 +1278,11 @@ h1.logo {
     margin: 1px;
     width: 167px;
     height: 78px;
-    background: #d1b03f; }
+    background: #d1b03f;
+    overflow: hidden; }
     .sponsor-list .sponsor img {
-      width: 100%; }
+      width: 100%;
+      height: 100%; }
   .sponsor-list.sponsors-platinum .sponsor {
     width: 289px;
     height: 160px; }
