@@ -1270,11 +1270,12 @@ h1.logo {
 .sponsor-list {
   padding: 0;
   font-size: 0px;
-  margin-bottom: 2px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   text-align: center; }
   .sponsor-list .sponsor {
     display: inline-block;
-    margin: 0 1px;
+    margin: 1px;
     width: 167px;
     height: 78px;
     background: #d1b03f; }
@@ -1287,6 +1288,9 @@ h1.logo {
     width: 230px;
     height: 128px; }
   .sponsor-list.sponsors-silver .sponsor {
+    width: 167px;
+    height: 93px; }
+  .sponsor-list.sponsors-startup .sponsor {
     width: 167px;
     height: 93px; }
 
