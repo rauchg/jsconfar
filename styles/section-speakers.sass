@@ -44,6 +44,12 @@
     top: 0
     left: 0
 
+  .icon-nodejs
+    position: absolute
+    top: 65px
+    left: -26px
+    z-index: 10
+
   .description
     margin-left: 128px
     padding: 17px 20px 0 20px
@@ -95,15 +101,26 @@
   height: 30px
   overflow: hidden
   background: url(images/flags.png) no-repeat -1000px -1000px
+  background-size: 300px 30px
+  z-index: 10
 
   &.flag-argentina
     background-position: -0px -0px
 
   &.flag-usa
-    background-position: -0px -30px
+    background-position: -30px -0px
 
-  &.flag-brasil
-    background-position: -0px -60px
+  &.flag-brazil
+    background-position: -60px -0px
 
   &.flag-spain
-    background-position: -0px -90px
+    background-position: -90px -0px
+
+  &.flag-switzerland
+    background-position: -120px -0px
+
+  &.flag-colombia
+    background-position: -150px -0px
+
+  &.flag-bulgary
+    background-position: -180px -0px

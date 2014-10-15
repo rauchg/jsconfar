@@ -492,7 +492,7 @@ a.button, button.button {
   padding: 0; }
 
 .sprite, .icon, .large-icon, .illustration-tickets .button:before {
-  background: url(images/sprite.png) no-repeat -1000px -1000px;
+  background: url(images/sprite.png?20141015) no-repeat -1000px -1000px;
   background-size: 500px 250px;
   display: inline-block;
   overflow: hidden;
@@ -504,7 +504,7 @@ a.button, button.button {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .sprite, .icon, .large-icon, .illustration-tickets .button:before {
-    background-image: url(images/sprite@2x.png); } }
+    background-image: url(images/sprite@2x.png?20141015); } }
 .icon {
   width: 20px;
   height: 20px; }
@@ -541,6 +541,8 @@ a.button, button.button {
     background-position: -277px -150px; }
   .large-icon.icon-party {
     background-position: -350px -150px; }
+  .large-icon.icon-nodejs {
+    background-position: -414px -150px; }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .sprite, .icon, .large-icon, .illustration-tickets .button:before {
@@ -755,6 +757,11 @@ h1.logo {
     position: absolute;
     top: 0;
     left: 0; }
+  .speaker .icon-nodejs {
+    position: absolute;
+    top: 65px;
+    left: -26px;
+    z-index: 10; }
   .speaker .description {
     margin-left: 128px;
     padding: 17px 20px 0 20px; }
@@ -792,15 +799,23 @@ h1.logo {
   width: 30px;
   height: 30px;
   overflow: hidden;
-  background: url(images/flags.png) no-repeat -1000px -1000px; }
+  background: url(images/flags.png) no-repeat -1000px -1000px;
+  background-size: 300px 30px;
+  z-index: 10; }
   .flag.flag-argentina {
     background-position: 0px 0px; }
   .flag.flag-usa {
-    background-position: 0px -30px; }
-  .flag.flag-brasil {
-    background-position: 0px -60px; }
+    background-position: -30px 0px; }
+  .flag.flag-brazil {
+    background-position: -60px 0px; }
   .flag.flag-spain {
-    background-position: 0px -90px; }
+    background-position: -90px 0px; }
+  .flag.flag-switzerland {
+    background-position: -120px 0px; }
+  .flag.flag-colombia {
+    background-position: -150px 0px; }
+  .flag.flag-bulgary {
+    background-position: -180px 0px; }
 
 .section-calendar {
   background: #214760;
@@ -1823,6 +1838,8 @@ body {
     .speaker.speaker-teaser {
       padding-top: 37px;
       margin-right: 0; }
+    .speaker.speaker-teaser.full-width {
+      margin-right: 0; }
 
   .section-tickets .ticket-includes {
     font-size: 16px; }
@@ -1891,6 +1908,12 @@ body {
 
   .speaker {
     border-width: 2px 0; }
+    .speaker .icon-nodejs {
+      left: 8px;
+      top: 92px;
+      background-position: -300px 0px;
+      width: 27px;
+      height: 30px; }
 
   .countdown .counter:first-child {
     border-left-width: 0; }
