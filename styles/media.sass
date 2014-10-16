@@ -136,6 +136,13 @@
   .footer-dark-strip
     height: 122px
 
+
+  .speaker
+
+    &.keynote-speaker
+      p.talk
+        display: none
+
 @media only screen and (max-width: 710px)
   .housing
     .description
@@ -165,7 +172,6 @@
   .speaker-list
     margin-left: auto
     margin-right: auto
-    max-width: 360px
     padding: 2px 0 0
 
   .speaker
@@ -175,7 +181,8 @@
     &.speaker-teaser
       padding-top: 37px
       margin-right: 0
-    &.speaker-teaser.full-width
+
+    &.full-width
       margin-right: 0
 
 
@@ -191,6 +198,17 @@
   .global-stats
     display: none
 
+  .speaker.keynote-speaker
+    h2
+      font-size: 20px 
+      .full-name
+        display: block
+      em
+        margin: 0
+        margin-top: 5px
+    p
+      font-size: 15px
+
 @media only screen and (max-width: 540px)
   .container
     padding: 0 10px
@@ -203,6 +221,28 @@
     background: #ffc81c
 
 @media only screen and (max-width: 480px)
+
+  .speaker.keynote-speaker
+    min-height: 132px
+
+    h2
+      font-size: 18px
+      em
+        font-size: 12px
+
+    figure
+      width: 128px
+      height: 128px
+
+    .description
+      margin-left: 128px
+
+    .name
+      min-height: 85px
+
+    p .hidden-mobile
+      display: none
+
   .housing
     .description
       padding: 15px 20px 42px
@@ -248,6 +288,7 @@
       margin: 7px 0 0
 
 @media only screen and (max-width: 420px)
+
   .main-menu
     margin: 0 -10px
     max-width: none
@@ -279,6 +320,15 @@
         border-left-width: 0
       &:last-child
         border-right-width: 0
+
+  .section-earlybird
+    .countdown
+      .counter
+        &:first-child
+          border-left-width: 2px
+        &:last-child
+          border-right-width: 2px
+
 
 @media only screen and (max-width: 400px)
   .section-header
