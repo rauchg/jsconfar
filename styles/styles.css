@@ -611,7 +611,8 @@ h1.logo {
 
 .countdown {
   margin: 0 200px;
-  overflow: hidden; }
+  overflow: hidden;
+  text-align: center; }
   .countdown .counter {
     width: 25%;
     float: left;
@@ -783,14 +784,40 @@ h1.logo {
     color: #55acee; }
   .speaker a.github {
     color: #212121; }
+  .speaker.full-width {
+    margin-right: 4px;
+    width: auto;
+    float: none;
+    clear: both; }
+  .speaker.keynote-speaker {
+    min-height: 164px; }
+    .speaker.keynote-speaker h2 {
+      font-size: 22px; }
+      .speaker.keynote-speaker h2 em {
+        font-size: 13px;
+        font-weight: normal;
+        font-style: normal;
+        display: inline-block;
+        background: #264d7e;
+        color: white;
+        padding: 2px 8px;
+        border-radius: 3px;
+        vertical-align: top;
+        margin-top: -3px;
+        margin-left: 10px; }
+    .speaker.keynote-speaker p.talk {
+      font-size: 15px;
+      margin-top: 10px; }
+    .speaker.keynote-speaker .name {
+      min-height: 115px; }
+    .speaker.keynote-speaker figure {
+      width: 160px;
+      height: 160px; }
+    .speaker.keynote-speaker .description {
+      margin-left: 160px; }
   .speaker.speaker-teaser {
     padding: 47px 20px 0 20px;
     background: #bcc7cf; }
-    .speaker.speaker-teaser.full-width {
-      margin-right: 4px;
-      width: auto;
-      float: none;
-      clear: both; }
     .speaker.speaker-teaser h2 {
       text-align: center;
       line-height: 140%; }
@@ -1311,6 +1338,26 @@ h1.logo {
     width: 167px;
     height: 93px; }
 
+.section-earlybird {
+  background: white;
+  color: #1e3d55;
+  padding: 60px 0; }
+  .section-earlybird h1 {
+    margin-bottom: 30px; }
+  .section-earlybird p {
+    font-size: 17px;
+    font-weight: bold; }
+  .section-earlybird .main-menu {
+    margin: 60px auto 0px auto;
+    padding: 0;
+    max-width: 400px; }
+  .section-earlybird .countdown {
+    margin: 0;
+    margin-bottom: 30px;
+    max-width: 400px; }
+  .section-earlybird .signup-form {
+    margin-bottom: 0; }
+
 .section-footer {
   background: #ffca00;
   color: #1e3d55;
@@ -1807,7 +1854,10 @@ body {
     height: 286px; }
 
   .footer-dark-strip {
-    height: 122px; } }
+    height: 122px; }
+
+  .speaker.keynote-speaker p.talk {
+    display: none; } }
 @media only screen and (max-width: 710px) {
   .housing .description {
     margin-left: 0; }
@@ -1829,7 +1879,6 @@ body {
   .speaker-list {
     margin-left: auto;
     margin-right: auto;
-    max-width: 360px;
     padding: 2px 0 0; }
 
   .speaker {
@@ -1838,7 +1887,7 @@ body {
     .speaker.speaker-teaser {
       padding-top: 37px;
       margin-right: 0; }
-    .speaker.speaker-teaser.full-width {
+    .speaker.full-width {
       margin-right: 0; }
 
   .section-tickets .ticket-includes {
@@ -1849,7 +1898,17 @@ body {
     width: auto; } }
 @media only screen and (max-width: 599px) {
   .global-stats {
-    display: none; } }
+    display: none; }
+
+  .speaker.keynote-speaker h2 {
+    font-size: 20px; }
+    .speaker.keynote-speaker h2 .full-name {
+      display: block; }
+    .speaker.keynote-speaker h2 em {
+      margin: 0;
+      margin-top: 5px; }
+  .speaker.keynote-speaker p {
+    font-size: 15px; } }
 @media only screen and (max-width: 540px) {
   .container {
     padding: 0 10px; }
@@ -1860,6 +1919,22 @@ body {
   .intro-holder {
     background: #ffc81c; } }
 @media only screen and (max-width: 480px) {
+  .speaker.keynote-speaker {
+    min-height: 132px; }
+    .speaker.keynote-speaker h2 {
+      font-size: 18px; }
+      .speaker.keynote-speaker h2 em {
+        font-size: 12px; }
+    .speaker.keynote-speaker figure {
+      width: 128px;
+      height: 128px; }
+    .speaker.keynote-speaker .description {
+      margin-left: 128px; }
+    .speaker.keynote-speaker .name {
+      min-height: 85px; }
+    .speaker.keynote-speaker p .hidden-mobile {
+      display: none; }
+
   .housing .description {
     padding: 15px 20px 42px;
     position: relative; }
@@ -1918,7 +1993,12 @@ body {
   .countdown .counter:first-child {
     border-left-width: 0; }
   .countdown .counter:last-child {
-    border-right-width: 0; } }
+    border-right-width: 0; }
+
+  .section-earlybird .countdown .counter:first-child {
+    border-left-width: 2px; }
+  .section-earlybird .countdown .counter:last-child {
+    border-right-width: 2px; } }
 @media only screen and (max-width: 400px) {
   .section-header address {
     font-size: 16px; }

@@ -464,6 +464,25 @@
       <p>We're bringing together a fantastic team of speakers from all over the world for JSConf Argentina 2014.</p>
 
       <ul class="speaker-list">
+
+        <li class="speaker full-width keynote-speaker wow animated fadeInDown" data-wow-delay=".1s">
+          <figure>
+            <div class="flag flag-usa"></div>
+            <img src="images/speakers/andreas-gal.jpg" alt=""/>
+          </figure>
+          <div class="description">
+            <div class="name">
+              <h2><span class="full-name">Andreas Gal</span> <em>Keynote Speaker</em></h2>
+              <p>CTO of Mozilla<span class="hidden-mobile">, Creator of PDF.js and Boot2Gecko</span></p>
+              <p class="talk">Who needs Nashorn? j2me.js, a multi-threaded Java VM in JavaScript</p>
+            </div>
+            <div class="social">
+              <a href="https://github.com/andreasgal" class="github" target="_blank">&lt;github&gt;</a>
+              <a href="https://twitter.com/andreasgal" class="twitter" target="_blank">&lt;tw&gt;</a>
+            </div>
+          </div>
+        </li>
+
         <li class="speaker wow animated fadeInLeft" data-wow-delay=".1s">
           <figure>
             <div class="flag flag-usa"></div>
@@ -738,7 +757,6 @@
           </div>
         </li>
 
-
         <li class="speaker speaker-teaser full-width wow animated fadeInRight">
 
           <h2>More speakers will be announced soon!</h2>
@@ -795,6 +813,50 @@
   </section>
 
 
+  <section class="section-earlybird">
+
+    <div class="container">
+
+      <h1><span class="large-icon icon-tickets"></span> JSConf 2014 Early Bird</h1>
+
+      <p>We'll release limited tickets at a discounted price in...</p>
+
+      <div class="main-menu">
+
+        <div class="countdown">
+          <span class="counter">
+            <strong id="countdown-earlybird-days">&nbsp;</strong>
+            Days
+          </span>
+          <span class="counter">
+            <strong id="countdown-earlybird-hours">&nbsp;</strong>
+            Hrs
+          </span>
+          <span class="counter">
+            <strong id="countdown-earlybird-minutes">&nbsp;</strong>
+            Min
+          </span>
+          <span class="counter">
+            <strong id="countdown-earlybird-seconds">&nbsp;</strong>
+            Sec
+          </span>
+        </div>
+
+        <form class="signup-form" action="http://devthought.us4.list-manage.com/subscribe/post?u=33875ea2facba4ce8d8bc0d66&amp;id=8c9110b9d4" validate method="post" target="_blank">
+          <div class="input-group">
+            <input type="email" name="EMAIL" value="" placeholder="Tell me when they're out" required />
+            <span class="submit"><button type="submit"><span class="icon icon-send-yellow"></span></button></span>
+          </div>
+          <input type="hidden" name="b_33875ea2facba4ce8d8bc0d66_8c9110b9d4" tabindex="-1" value="">
+          <input type="hidden" name="subscribe" value="Subscribe" />
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
 
   <section class="section-sponsors">
 
@@ -804,6 +866,8 @@
 
     <ul class="sponsor-list sponsors-platinum wow animated fadeInDown">
       <li class="sponsor"><a href="http://automattic.com/" target="_blank"><img src="images/sponsors/automattic-logo.png" alt="Automattic"/></a></li>
+      <li class="sponsor"><a href="https://www.google.com" target="_blank"><img src="images/sponsors/google-logo.png" alt="Google"/></a></li>
+      <li class="sponsor"><a href="https://auth0.com/" target="_blank"><img src="images/sponsors/auth0-logo.png" alt="Auth0"/></a></li>
     </ul>
 
     <ul class="sponsor-list sponsors-gold wow animated fadeInUp" data-wow-delay=".1s">
@@ -816,6 +880,8 @@
 
     <ul class="sponsor-list sponsors-startup wow animated fadeInUp" data-wow-delay=".1s">
       <li class="sponsor"><a href="http://www.terra.com" target="_blank"><img src="images/sponsors/terra-logo.png" alt="Terra"/></a></li>
+      <li class="sponsor"><a href="https://nodesource.com/" target="_blank"><img src="images/sponsors/nodesource-logo.png" alt="NodeSource"/></a></li>
+      <li class="sponsor"><a href="http://www.shovelapps.com/" target="_blank"><img src="images/sponsors/shovelapps-logo.png" alt="ShovelApps"/></a></li>
     </ul>
 
     <div class="cta-holder">
@@ -854,26 +920,28 @@
 
 <script>
   // https://www.youtube.com/watch?v=9jK-NcRmVcw
-  var updateCountdown = function() {
+  var updateCountdown = function(date, selector) {
 
-    var jsconfStart = new Date(Date.UTC(2014, 10, 29, 12, 0));
+    var dateStart = new Date(date);
     var now = new Date();
 
-    var diff = Math.round((jsconfStart.getTime() - now.getTime()) / 1000);
+    var diff = Math.round((dateStart.getTime() - now.getTime()) / 1000);
+    if( diff < 0 ){ diff = 0; }
     var days = Math.floor(diff / (60*60*24));
     var hours = Math.floor(diff % (60*60*24) / (60*60));
     var minutes = Math.floor(diff % (60*60*24) % (60*60) / 60);
     var seconds = Math.floor(diff % (60*60*24) % (60*60) % 60);
 
-    document.getElementById('countdown-days').innerHTML = days;
-    document.getElementById('countdown-hours').innerHTML = hours;
-    document.getElementById('countdown-minutes').innerHTML = minutes;
-    document.getElementById('countdown-seconds').innerHTML = seconds;
+    document.getElementById(selector+'-days').innerHTML = days;
+    document.getElementById(selector+'-hours').innerHTML = hours;
+    document.getElementById(selector+'-minutes').innerHTML = minutes;
+    document.getElementById(selector+'-seconds').innerHTML = seconds;
 
-    setTimeout(updateCountdown, 1000);
+    setTimeout(function(){ updateCountdown(date, selector); }, 1000);
   };
 
-  updateCountdown();
+  updateCountdown(Date.UTC(2014, 10, 29, 12, 0), 'countdown');
+  updateCountdown(Date.UTC(2014, 9, 24, 15, 0), 'countdown-earlybird');
 </script>
 
 <div id="contTerminal" class="closedTerminal terminalsizeanimated" style="overflow:visible !important">

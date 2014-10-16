@@ -80,16 +80,51 @@
     color: $githubGray
 
 
+  &.full-width
+    margin-right: 4px
+    width: auto
+    float: none
+    clear: both
+
+
+  &.keynote-speaker
+    min-height: 164px
+
+    h2
+      font-size: 22px
+
+      em
+        font-size: 13px
+        font-weight: normal
+        font-style: normal
+        display: inline-block
+        background: rgb(38, 77, 126)
+        color: white
+        padding: 2px 8px
+        border-radius: 3px
+        vertical-align: top
+        margin-top: -3px
+        margin-left: 10px
+
+    p.talk
+      font-size: 15px
+      margin-top: 10px
+
+    .name
+      min-height: 115px
+
+    figure
+      width: 160px
+      height: 160px
+
+    .description
+      margin-left: 160px
+  
+
   &.speaker-teaser
     padding: 47px 20px 0 20px
     background: $gray
 
-    &.full-width
-      margin-right: 4px
-      width: auto
-      float: none
-      clear: both
-    
     h2
       text-align: center
       line-height: 140%
