@@ -826,7 +826,7 @@ h1.logo {
   width: 30px;
   height: 30px;
   overflow: hidden;
-  background: url(images/flags.png) no-repeat -1000px -1000px;
+  background: url(images/flags.png?20141017) no-repeat -1000px -1000px;
   background-size: 300px 30px;
   z-index: 10; }
   .flag.flag-argentina {
@@ -843,6 +843,8 @@ h1.logo {
     background-position: -150px 0px; }
   .flag.flag-bulgary {
     background-position: -180px 0px; }
+  .flag.flag-uruguay {
+    background-position: -210px 0px; }
 
 .section-calendar {
   background: #214760;
@@ -1142,6 +1144,10 @@ h1.logo {
       .place-grid .place-cell-data p.street-address {
         margin-top: 13px;
         font-size: 15px; }
+      .place-grid .place-cell-data p a {
+        color: white;
+        text-decoration: underline;
+        white-space: nowrap; }
   .place-grid .place-cell-map {
     position: absolute;
     width: 50%;
