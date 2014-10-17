@@ -492,7 +492,7 @@ a.button, button.button {
   padding: 0; }
 
 .sprite, .icon, .large-icon, .illustration-tickets .button:before {
-  background: url(images/sprite.png?20141015) no-repeat -1000px -1000px;
+  background: url(images/sprite.png?20141017) no-repeat -1000px -1000px;
   background-size: 500px 250px;
   display: inline-block;
   overflow: hidden;
@@ -504,7 +504,7 @@ a.button, button.button {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .sprite, .icon, .large-icon, .illustration-tickets .button:before {
-    background-image: url(images/sprite@2x.png?20141015); } }
+    background-image: url(images/sprite@2x.png?20141017); } }
 .icon {
   width: 20px;
   height: 20px; }
@@ -1356,13 +1356,30 @@ h1.logo {
   .section-earlybird .main-menu {
     margin: 60px auto 0px auto;
     padding: 0;
-    max-width: 400px; }
+    max-width: 400px;
+    position: relative; }
   .section-earlybird .countdown {
     margin: 0;
     margin-bottom: 30px;
     max-width: 400px; }
   .section-earlybird .signup-form {
     margin-bottom: 0; }
+
+.birdie {
+  position: absolute;
+  display: block; }
+  .birdie.birdie-countdown {
+    background-position: -340px 0px;
+    top: -30px;
+    left: -7px;
+    width: 27px;
+    height: 32px; }
+  .birdie.birdie-flying {
+    background-position: -380px 0px;
+    top: -46px;
+    right: -54px;
+    width: 39px;
+    height: 30px; }
 
 .section-footer {
   background: #ffca00;
